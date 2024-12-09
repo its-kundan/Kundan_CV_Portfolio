@@ -46,3 +46,4 @@ git branch -M main
 git push -u origin main
 ```
 
+![Portfolio Preview](./public/images/projects/portfolio.png)

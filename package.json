@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-kundan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@svgr/webpack": "^8.1.0",
+    "autoprefixer": "10.4.15",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^10.16.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.0.4",
+    "react": "^18.3.1",
+    "react-animated-numbers": "^0.16.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-responsive": "^10.0.0",
+    "react-type-animation": "^3.1.0",
+    "resend": "^1.0.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "15.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}

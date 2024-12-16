@@ -55,7 +55,7 @@ const projectsData = [
     id: 8,
     title: "Drive Storage",
     description: "A cloud storage web application that clones the functionality of Google Drive.",
-    image: "/images/projects/drive storage.png",
+    image: "/images/projects/drive.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/its-kundan/Drive-storage",
     previewUrl: "https://drive-storage.vercel.app/",
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
       name="Robotics"
       isSelected={tag === "Robotics"}
     />
-    <ProjectTag
+    {/* <ProjectTag
       onClick={handleTagChange}
       name="ECE"
       isSelected={tag === "ECE"}
@@ -139,7 +139,8 @@ const ProjectsSection = () => {
       onClick={handleTagChange}
       name="Analytics"
       isSelected={tag === "Analytics"}
-    />
+    /> */}
+    {/*  */}
   </div>
 </div>
 

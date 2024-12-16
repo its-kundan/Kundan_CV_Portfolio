@@ -17,14 +17,3 @@ const ProjectTag = ({ name, onClick, isSelected }) => {
 };
 
 export default ProjectTag;
-
-// const ProjectTag = ({ name, onClick, isSelected }) => {
-//   const buttonStyles = isSelected
-//     ? "bg-blue-500 text-white border-blue-500 hover:bg-blue-700" // active state
-//     : "text-gray-400 border-gray-600 hover:border-gray-200 hover:text-white"; // inactive state
-
-//   return (
-   
-//   );
-// };
-

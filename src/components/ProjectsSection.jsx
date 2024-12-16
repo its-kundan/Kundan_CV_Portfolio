@@ -4,72 +4,9 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { projectsData } from "./../../public/projectdata";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Next Portfolio Website",
-    description: "A personal portfolio website built using React and Tailwind CSS.",
-    image: "/images/projects/portfolio.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/its-kundan/portfolio",
-    previewUrl: "https://kundan-portfolio.vercel.app/",
-  },
-  {
-    id: 2,
-    title: "Job Portal Website",
-    description: "A MERN stack application for job seekers and recruiters.",
-    image: "/images/projects/technoloop.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/its-kundan/job-portal",
-    previewUrl: "https://job-portal-kundan.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Sudoku Solver",
-    description: "A sudoku solver web application.",
-    image: "/images/projects/sudoku.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/its-kundan/sudoku-solver",
-    previewUrl: "https://suduku-solver.vercel.app/",
-  },
-  {
-    id: 5,
-    title: "Luminosity Drone",
-    description: "A robotics project for light detection using OpenCV and Python.",
-    image: "/images/projects/drone.webp",
-    tag: ["All", "Robotics"],
-    gitUrl: "https://github.com/its-kundan/luminosity-drone",
-    previewUrl: "#",
-  },
-  {
-    id: 6,
-    title: "Coin Toss Game",
-    description: "A fun web-based coin toss game using HTML, CSS, and JavaScript.",
-    image: "/images/projects/coin.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/its-kundan/coin-toss",
-    previewUrl: "https://coin-toss.vercel.app/",
-  },
-  {
-    id: 8,
-    title: "Drive Storage",
-    description: "A cloud storage web application that clones the functionality of Google Drive.",
-    image: "/images/projects/drive.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/its-kundan/Drive-storage",
-    previewUrl: "https://drive-storage.vercel.app/",
-  },
-  {
-    id: 9,
-    title: "Super Chats",
-    description: "A real-time chat application allowing users to communicate instantly over the web.",
-    image: "/images/projects/chat1.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/its-kundan/Super-Chats",
-    previewUrl: "https://super-chats.vercel.app/",
-  }
-];
+
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaYoutube } from 'react-icons/fa';
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -49,31 +50,35 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link
-            href="https://github.com/its-kundan"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/github-icon.svg"
-              alt="GitHub Icon"
-              width={32}
-              height={32}
-            />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/its-kundan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/linkedin-icon.svg"
-              alt="LinkedIn Icon"
-              width={32}
-              height={32}
-            />
-          </Link>
-        </div>
+      <Link
+        href="https://github.com/its-kundan"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub size={32} aria-label="GitHub Icon" />
+      </Link>
+      <Link
+        href="https://www.linkedin.com/in/its-kundan/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedinIn size={32} aria-label="LinkedIn Icon" />
+      </Link>
+      <a
+        href="mailto:kundan51kk@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaEnvelope size={32} aria-label="Email Icon" />
+      </a>
+      <Link
+        href="https://www.youtube.com/channel/YourChannel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaYoutube size={32} aria-label="YouTube Icon" />
+      </Link>
+    </div>
       </div>
       <div>
         {emailSubmitted ? (
@@ -95,7 +100,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="kundan51kk@gmail.com"
+                placeholder="enter your email"
               />
             </div>
             <div className="mb-6">

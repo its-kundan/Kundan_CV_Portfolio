@@ -4,11 +4,16 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CV_URL } from "./../../public/data";
+import { CV_URL } from "../../public/resume";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center lg:py-0" style={{ marginTop: '-10vh' }}> {/* Adjust the negative margin to control how much higher you want the section to appear */}
+    <section
+      className="min-h-screen flex flex-col justify-center items-center lg:py-0"
+      style={{ marginTop: "-10vh" }}
+    >
+      {" "}
+      {/* Adjust the negative margin to control how much higher you want the section to appear */}
       <div className="grid grid-cols-1 sm:grid-cols-12 mx-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -21,7 +26,7 @@ const HeroSection = () => {
               Hello, I&apos;m{" "}
             </span>
             <br />
-            <div style={{ height: '100px', overflow: 'hidden' }}>
+            <div style={{ height: "100px", overflow: "hidden" }}>
               <TypeAnimation
                 sequence={[
                   "Kundan Kumar",
@@ -170,7 +175,7 @@ export default HeroSection;
 //           width={280}
 //           height={280}
 //         />
-        
+
 //       </div>
 //     </motion.div>
 //   </div>

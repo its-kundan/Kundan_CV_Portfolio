@@ -24,15 +24,6 @@ const projectsData = [
     gitUrl: "https://github.com/its-kundan/job-portal",
     previewUrl: "https://job-portal-kundan.vercel.app/",
   },
-  // {
-  //   id: 3,
-  //   title: "Medical Management System",
-  //   description: "A full-stack medical management application using MERN stack.",
-  //   image: "/images/projects/3.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "https://github.com/its-kundan/medical-management",
-  //   previewUrl: "https://medical-management.vercel.app/",
-  // },
   {
     id: 4,
     title: "Sudoku Solver",
@@ -60,15 +51,24 @@ const projectsData = [
     gitUrl: "https://github.com/its-kundan/coin-toss",
     previewUrl: "https://coin-toss.vercel.app/",
   },
-  // {
-  //   id: 7,
-  //   title: "E-commerce Application",
-  //   description: "A scalable e-commerce platform using React and Firebase.",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "https://github.com/its-kundan/e-commerce",
-  //   previewUrl: "https://e-commerce.vercel.app/",
-  // },
+  {
+    id: 8,
+    title: "Drive Storage",
+    description: "A cloud storage web application that clones the functionality of Google Drive.",
+    image: "/images/projects/drive storage.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/its-kundan/Drive-storage",
+    previewUrl: "https://drive-storage.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "Super Chats",
+    description: "A real-time chat application allowing users to communicate instantly over the web.",
+    image: "/images/projects/chat1.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/its-kundan/Super-Chats",
+    previewUrl: "https://super-chats.vercel.app/",
+  }
 ];
 
 const ProjectsSection = () => {

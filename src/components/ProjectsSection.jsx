@@ -109,7 +109,7 @@ const ProjectsSection = () => {
     My Projects
   </h2>
   <div className="text-white py-6 mx-auto w-full overflow-hidden">
-  <div className="grid grid-cols-4 sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-0.5 justify-center">
+  <div className="grid grid-cols-4 sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-0.8 justify-center">
     <ProjectTag
       onClick={handleTagChange}
       name="All"
@@ -134,6 +134,11 @@ const ProjectsSection = () => {
       onClick={handleTagChange}
       name="ECE"
       isSelected={tag === "ECE"}
+    />
+    <ProjectTag
+      onClick={handleTagChange}
+      name="Analytics"
+      isSelected={tag === "Analytics"}
     />
   </div>
 </div>

@@ -108,32 +108,40 @@ const ProjectsSection = () => {
   <h2 className="text-center text-4xl font-bold text-white mt-1 mb-4 md:mb-6">
     My Projects
   </h2>
-  <div className="text-white flex flex-wrap justify-center items-center gap-2 py-6">
-  <ProjectTag
-    onClick={handleTagChange}
-    name="All"
-    isSelected={tag === "All"}
-    className="w-1/3 sm:w-auto"
-  />
-  <ProjectTag
-    onClick={handleTagChange}
-    name="Web"
-    isSelected={tag === "Web"}
-    className="w-1/3 sm:w-auto"
-  />
-  <ProjectTag
-    onClick={handleTagChange}
-    name="Mobile"
-    isSelected={tag === "Mobile"}
-    className="w-1/3 sm:w-auto"
-  />
-  <ProjectTag
-    onClick={handleTagChange}
-    name="Robotics"
-    isSelected={tag === "Robotics"}
-    className="w-1/3 sm:w-auto"
-  />
+  <div className="text-white py-6 mx-auto w-full overflow-hidden">
+  <div className="grid grid-cols-4 sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-0.5 justify-center">
+    <ProjectTag
+      onClick={handleTagChange}
+      name="All"
+      isSelected={tag === "All"}
+    />
+    <ProjectTag
+      onClick={handleTagChange}
+      name="Web"
+      isSelected={tag === "Web"}
+    />
+    <ProjectTag
+      onClick={handleTagChange}
+      name="Mobile"
+      isSelected={tag === "Mobile"}
+    />
+    <ProjectTag
+      onClick={handleTagChange}
+      name="Robotics"
+      isSelected={tag === "Robotics"}
+    />
+    <ProjectTag
+      onClick={handleTagChange}
+      name="ECE"
+      isSelected={tag === "ECE"}
+    />
+  </div>
 </div>
+
+
+
+
+
 
   <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
     {displayedProjects.map((project, index) => (

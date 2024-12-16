@@ -48,7 +48,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className="bg-black-100 py-8">
+    <div className="bg-black-100 py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl font-semibold text-center text-white-800 mb-6">My Achievements</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

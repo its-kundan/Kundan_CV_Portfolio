@@ -92,3 +92,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+/* Apply only when the height is greater than the width */
+@media (orientation: portrait) {
+  .min-vh-custom {
+    min-height: 70vh; /* Adjust this value as needed */
+  }
+}
+
+/* Optional: Responsive adjustment for smaller screens in portrait mode */
+@media (orientation: portrait) and (max-height: 800px) {
+  .min-vh-custom {
+    min-height: 50vh; /* Less space for very small devices */
+  }
+}

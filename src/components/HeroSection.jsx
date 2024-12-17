@@ -9,9 +9,15 @@ import { CV_URL } from "../../public/resume";
 const HeroSection = () => {
   return (
     <section
-  className="flex flex-col justify-center min-h-screen lg:py-0"
-  style={{ marginTop: "-10vh" }}
->
+    className="flex flex-col justify-center lg:py-0"
+    style={{
+      marginTop: "-10vh",
+      minHeight: '100vh' // Default to full screen height
+    }}
+  >
+    {/* Section content */}
+  
+  
   {/* This setup ensures the content is vertically centered in the section */}
   <div className="grid grid-cols-1 sm:grid-cols-12 mx-auto w-full">
     <motion.div

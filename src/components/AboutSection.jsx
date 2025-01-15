@@ -65,19 +65,20 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-  Hi, I&apos;m <b style={{ color: '#DFFF11' }}>Kundan Kumar</b>, a dedicated <b style={{ color: '#DFFF11' }}>Full-Stack Developer</b> with
-  expertise in the <b style={{ color: '#FF00FF' }}>MERN stack, Next.js, Tailwind CSS, PostgreSQL, and
-  AWS</b>. I&apos;m a <b style={{ color: '#DFFF11' }}>final-year student at NIT Agartala</b> with a passion for
-  building scalable web applications and solving problems in <b style={{ color: '#FF00FF' }}>web
+  Hi, I&apos;m <b style={{ color: '#6A5ACD' }}>Kundan Kumar</b>, a dedicated <b style={{ color: '#6A5ACD' }}>Full-Stack Developer</b> with
+  expertise in the <b style={{ color: '#4682B4' }}>MERN stack, Next.js, Tailwind CSS, PostgreSQL, and
+  AWS</b>. I&apos;m a <b style={{ color: '#6A5ACD' }}>final-year student at NIT Agartala</b> with a passion for
+  building scalable web applications and solving problems in <b style={{ color: '#4682B4' }}>web
   development, data structures, algorithms, and blockchain</b>. I have
-  hands-on experience with projects like <b style={{ color: '#FF00FF' }}>Medical Management and a Job
-  Portal</b>, and I’ve solved over <b style={{ color: '#FF00FF' }}>550 problems on LeetCode</b>, earning the
-  title of <b style={{ color: '#AA00FF' }}>LeetCode Knight</b>. My journey includes exploring <b style={{ color: '#FF00FF' }}>Web3</b>,
-  contributing to <b style={{ color: '#FF00FF' }}>open source</b>, and participating in hackathons like
-  <b style={{ color: '#FF00FF' }}>Hacktoberfest and Flipkart Grid</b>. I’m always eager to learn and
+  hands-on experience with projects like <b style={{ color: '#4682B4' }}>Medical Management and a Job
+  Portal</b>, and I’ve solved over <b style={{ color: '#4682B4' }}>550 problems on LeetCode</b>, earning the
+  title of <b style={{ color: '#8470FF' }}>LeetCode Knight</b>. My journey includes exploring <b style={{ color: '#4682B4' }}>Web3</b>,
+  contributing to <b style={{ color: '#4682B4' }}>open source</b>, and participating in hackathons like
+  <b style={{ color: '#4682B4' }}>Hacktoberfest and Flipkart Grid</b>. I’m always eager to learn and
   innovate, striving to grow as a developer and make meaningful
   contributions to the tech community.
 </p>
+
 
 
           <div className="flex flex-row justify-start mt-8">

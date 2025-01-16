@@ -27,7 +27,7 @@ const socialData = [
   },
   {
     name: "YouTube",
-    link: "https://www.youtube.com/",
+    link: "https://youtube.com/@kundan515k?si=QrOXDna3RXuwNT87",
     icon: <FaYoutube size={30} />,
     color: "text-red-600 hover:text-red-500",
   },

@@ -25,7 +25,7 @@ const socialLinks = [
     label: 'Telegram'
   },
   {
-    url: 'https://www.youtube.com/',
+    url: 'https://youtube.com/@kundan515k?si=QrOXDna3RXuwNT87',
     icon: <FaYoutube size={24} />,
     label: 'YouTube'
   }

@@ -10,7 +10,7 @@ import Profiles from '../components/Profiles';
 // import EducationTime from '../components/EducationTime';
 // import { VerticleTimeline } from "../components/VerticleTimeline";
 import Timeline2 from "../components/Timeline2";
-import CodingProfiles from "../components/CodingProfiles"; //
+import CodingSection from "../components/CodingSection"; //
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
         {/* <EducationTime /> */}
         {/* <Blogs /> */}
         {/* <Profiles /> */}
-        {/* <CodingProfiles /> */}
+        {/* <CodingSection /> */}
         <EmailSection />
       </div>
       {/* <Footer /> */}

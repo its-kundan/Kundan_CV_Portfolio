@@ -12,6 +12,11 @@ module.exports = {
     extend: {
       colors: {
         ...colors, // Includes the default Tailwind colors
+        neonPink: '#ff6ec7',
+        neonGreen: '#39ff14',
+        neonBlue: '#00c9ff',
+        neonYellow: '#ccff00',
+        neonPurple: '#9400d3',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: colors.purple,

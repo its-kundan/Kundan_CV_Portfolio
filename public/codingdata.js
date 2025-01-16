@@ -3,11 +3,10 @@ export const projectsData = [
       id: 1,
       title: "Personal Portfolio Website",
       description: "A personal portfolio website built using Next and Tailwind CSS.",
-      image: "/images/projects/portfolio.png",
+      image: "/images/coding/leetcode.png",
       tag: ["All", "Web"],
-      gitUrl: "https://github.com/its-kundan/Kundan_CV_Portfolio",
       previewUrl: "https://kundan-cv-portfolio.vercel.app",
-      tech: ["#next.js", "#tailwind.js", "#accertinityUI", "#resend", "#git"],
+      tech: ["node.",]
     },
     {
       id: 2,
@@ -15,9 +14,7 @@ export const projectsData = [
       description: "A MERN stack application for job seekers and recruiters.",
       image: "/images/projects/technoloop.png",
       tag: ["All", "Web"],
-      gitUrl: "https://github.com/its-kundan/technoloop",
       previewUrl: "https://technoloop.vercel.app/",
-      tech: ["react.js", "#tailwind.js", "#node.js", "#express.js","git"],
     },
     {
       id: 4,
@@ -25,9 +22,7 @@ export const projectsData = [
       description: "A sudoku solver web application.",
       image: "/images/projects/sudoku.png",
       tag: ["All", "Mobile"],
-      gitUrl: "https://github.com/its-kundan/Suduku-Solver",
       previewUrl: "https://suduku-solver.vercel.app/",
-      tech: ["#next.js", "#tailwind.js", "#shadcnUI","github", "git"],
     },
     {
       id: 5,
@@ -35,9 +30,7 @@ export const projectsData = [
       description: "A robotics project for light detection using OpenCV and Python.",
       image: "/images/projects/drone.webp",
       tag: ["All", "Robotics"],
-      gitUrl: "https://github.com/its-kundan/Luminosity-Drone",
       previewUrl: "https://github.com/its-kundan/Luminosity-Drone",
-      tech: ["#robotics", "#python", "#ROS", "#drone","github"],
     },
     {
       id: 6,
@@ -45,9 +38,7 @@ export const projectsData = [
       description: "A fun web-based coin toss game using HTML, CSS, and JavaScript.",
       image: "/images/projects/coin.png",
       tag: ["All", "Web"],
-      gitUrl: "https://github.com/its-kundan/Coin_Toss",
       previewUrl: "https://coin-toss-luck.netlify.app/",
-      tech: ["#html", "#css", "#javascript", "#git"],
     },
     {
       id: 8,
@@ -55,9 +46,7 @@ export const projectsData = [
       description: "A cloud storage web application that clones the functionality of Google Drive.",
       image: "/images/projects/drive.png",
       tag: ["All", "Web"],
-      gitUrl: "https://github.com/its-kundan/Drive-storage",
       previewUrl: "https://drive-storage-weld.vercel.app/",
-      tech: ["#node.js", "#express.js", "#accertinityUI", "#resend"],
     },
     {
       id: 9,
@@ -65,9 +54,7 @@ export const projectsData = [
       description: "A real-time chat application allowing users to communicate instantly over the web.",
       image: "/images/projects/chat1.png",
       tag: ["All", "Web"],
-      gitUrl: "https://github.com/its-kundan/Super-Chats",
       previewUrl: "https://github.com/its-kundan/Super-Chats",
-      tech: ["#socket.io", "#tailwind.js", "javascript","#node.js", "#express.js"],
       // Todo: live link.
     }
   ];

@@ -26,7 +26,7 @@ export default function Home() {
         {/* <EducationTime /> */}
         {/* <Blogs /> */}
         {/* <Profiles /> */}
-        <CodingProfiles />
+        {/* <CodingProfiles /> */}
         <EmailSection />
       </div>
       {/* <Footer /> */}

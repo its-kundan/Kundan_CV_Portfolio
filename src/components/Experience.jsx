@@ -55,10 +55,10 @@ const Experience = () => {
           <div className="md:w-1/6 hidden md:block">
             <div className="h-full w-1 bg-black-400 absolute left-2 md:left-1/2 transform -translate-x-1/2"></div>
           </div>
-          <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-10 md:flex-row">
+          <div className="flex flex-col space-y- md:space-y-0 md:space-x-10 md:flex-row">
             {experiences.map((experience, index) => (
               <div key={experience.id} className={`flex-1 px-4 py-4 bg-black shadow-lg rounded-lg my-4 md:my-0 ${index % 2 === 0 ? 'md:ml-20' : 'md:mr-20'}`}>
-                <h3 className="text-xl text-blue-800 font-semibold border-b border-gray-200">{experience.title}</h3>
+                <h3 className="text-xl text-blue-800 font-semibold border-b border-gray-700">{experience.title}</h3>
                 <p className="text-gray-700">{experience.period}</p>
                 <ul className="list-disc ml-5 my-2 text-gray-600">
                   {experience.points.map((point, idx) => (

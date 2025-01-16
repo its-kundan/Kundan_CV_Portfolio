@@ -7,6 +7,10 @@ import Footer from "../components/Footer";
 import AchievementsSection from "../components/AchievementsSection";
 import Blogs from '../components/Blogs';
 import Profiles from '../components/Profiles';
+// import EducationTime from '../components/EducationTime';
+// import { VerticleTimeline } from "../components/VerticleTimeline";
+import Timeline2 from "../components/Timeline2";
+import CodingProfiles from "../components/CodingProfiles"; //
 
 export default function Home() {
   return (
@@ -17,9 +21,12 @@ export default function Home() {
         <HeroSection />
         <AchievementsSection />
         <AboutSection />
+        {/* <Timeline2 /> */}
         <ProjectsSection />
+        {/* <EducationTime /> */}
         {/* <Blogs /> */}
         {/* <Profiles /> */}
+        <CodingProfiles />
         <EmailSection />
       </div>
       {/* <Footer /> */}

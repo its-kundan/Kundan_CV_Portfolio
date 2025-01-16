@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { SparklesCore } from "@/components/ui/sparkles";
 const achievements = [
   {
     id: 1,

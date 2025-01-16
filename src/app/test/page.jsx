@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
-import Timeline2 from '@/components/Timeline2';
+import Intro from '@/components/Intro';
 const page = () => {
   return (
     <div>
-      <Timeline2 />
+      <Intro />
     </div>
   )
 }

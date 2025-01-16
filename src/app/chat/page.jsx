@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Timeline = () => {
+const page = () => {
   return (
     <div>
-      
+      Chat with me.
     </div>
   )
 }
 
-export default Timeline
+export default page

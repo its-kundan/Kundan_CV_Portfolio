@@ -74,18 +74,18 @@ const HeroSection = () => {
         >
           Links
         </Link>
-        <Link
+        <button className="px-8 py-2 rounded-full relative bg-slate-700 text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600">
+  <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+  <span className="relative z-20">
+  <Link
           href="/clone"
-          className="text-sm sm:text-base py-2 px-4 inline-block rounded-full bg-gradient-to-br from-blue-500 to-green-500 hover:bg-slate-200 text-white text-center"
         >
           AI Clone
         </Link>
-        <Link
-          href="/chat"
-          className="text-sm sm:text-base py-2 px-4 inline-block rounded-full bg-gradient-to-br from-blue-500 to-green-500 hover:bg-slate-200 text-white text-center"
-        >
-          Chat With My Clone
-        </Link>
+    {/* AI Clone */}
+  </span>
+</button>
+        
       </div>
     </motion.div>
     <motion.div

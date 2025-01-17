@@ -37,7 +37,7 @@ export const projectsData = [
       tag: ["All", "Robotics"],
       gitUrl: "https://github.com/its-kundan/Luminosity-Drone",
       previewUrl: "https://github.com/its-kundan/Luminosity-Drone",
-      tech: ["#robotics", "#python", "#ROS", "#drone","github"],
+      tech: ["#robotics", "#python", "#ROS", "#drone","#github"],
     },
     {
       id: 6,
@@ -67,7 +67,7 @@ export const projectsData = [
       tag: ["All", "Web"],
       gitUrl: "https://github.com/its-kundan/Super-Chats",
       previewUrl: "https://github.com/its-kundan/Super-Chats",
-      tech: ["#socket.io", "#tailwind.js", "javascript","#node.js", "#express.js"],
+      tech: ["#socket.io", "#tailwind.js", "#javascript","#node.js", "#express.js"],
       // Todo: live link.
     }
   ];

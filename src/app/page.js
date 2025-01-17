@@ -11,6 +11,9 @@ import Profiles from '../components/Profiles';
 // import { VerticleTimeline } from "../components/VerticleTimeline";
 import Timeline2 from "../components/Timeline2";
 import CodingSection from "../components/CodingSection"; //
+// import ExperienceSectionjsxjsx from "@/components/ExperienceSection";
+import Experience from "@/components/Experience";
+import EducationTime from "@/components/EducationTime";
 
 export default function Home() {
   return (
@@ -27,6 +30,7 @@ export default function Home() {
         {/* <Blogs /> */}
         {/* <Profiles /> */}
         {/* <CodingSection /> */}
+        <EducationTime />
         <EmailSection />
       </div>
       {/* <Footer /> */}

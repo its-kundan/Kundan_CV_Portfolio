@@ -4,7 +4,7 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CV_URL } from "../../public/resume";
+import { cv2_sde } from "../../public/resume";
 
 const HeroSection = () => {
   return (
@@ -60,7 +60,7 @@ const HeroSection = () => {
           HireMe
         </Link>
         <Link
-          href={CV_URL}
+          href={cv2_sde}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm sm:text-base py-2 px-4 inline-block rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white text-center"

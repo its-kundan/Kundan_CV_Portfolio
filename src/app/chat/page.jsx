@@ -3,7 +3,7 @@ import Chat from '@/components/Chat';
 const page = () => {
   return (
     <div className='h-screen w-screen flex'>
-      <Chat />
+      {/* <Chat /> */}
     </div>
   )
 }

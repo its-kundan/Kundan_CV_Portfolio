@@ -1,4 +1,4 @@
-export const cv2_sde = "https://drive.google.com/file/d/1p0Ri22DTTWNOENKX0II7hh8X0_Bt3VrF/view?usp=drive_link";
+export const cv2_sde = "https://drive.google.com/file/d/12du4rhSkCaSU8L8Kb5QBF58iR6gIqSfb/view?usp=drive_link";
 export const cv1_sde = "";
 export const cv1_analyst = "";
 export const cv2_analyst = "";

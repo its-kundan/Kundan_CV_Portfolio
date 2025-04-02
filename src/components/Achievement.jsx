@@ -1,30 +1,44 @@
 "use client"
-/// Import React and the necessary hooks
 import React from 'react';
+import { motion } from 'framer-motion';
 
-// AchievementItem Component to display individual achievements
 const AchievementItem = ({ metric, value, postfix = '', prefix = '' }) => {
   return (
-    <div className="bg-black dark:bg-gray-800 shadow-md rounded-lg p-4 m-2 flex justify-between items-center">
-      <h4 className="text-lg font-semibold text-white-900 dark:text-gray-100">{metric}</h4>
-      <p className="text-xl font-bold text-white-900 dark:text-gray-100">
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="relative bg-gradient-to-br from-purple-600 to-blue-500 rounded-xl p-6 m-2 flex flex-col items-center"
+    >
+      <h4 className="text-lg font-semibold text-white mb-2">{metric}</h4>
+      <p className="text-3xl font-bold text-white">
         {prefix}{value}{postfix}
       </p>
-    </div>
+    </motion.div>
   );
 };
 
-// Achievements Component to display the list of achievements
-const Achievements = ({ achievements }) => {
+const Achievements = ({ achievements = [] }) => {  // Default empty array if undefined
   return (
-    <div className="py-8 px-4 bg-white-100 dark:bg-gray-900">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-6 text-white-900 dark:text-gray-100">My Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {achievements.map((item, index) => (
-            <AchievementItem key={index} {...item} />
-          ))}
-        </div>
+    <div className="py-16 px-4 bg-gray-900 dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-500"
+        >
+          My Achievements
+        </motion.h2>
+        
+        {achievements && achievements.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {achievements.map((item, index) => (
+              <AchievementItem key={index} {...item} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-gray-500 dark:text-gray-400">
+            No achievements to display
+          </p>
+        )}
       </div>
     </div>
   );

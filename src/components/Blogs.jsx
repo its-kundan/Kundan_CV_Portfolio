@@ -1,128 +1,115 @@
-"use client";
-import React, { useState, useRef } from "react";
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+"use client"
+import { useState } from 'react';
+import Image from 'next/image';
+import blogs from '../../data/blogs.js'; // Changed import path - see explanation below
 
-const projectsData = [
-  {
-    id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+const Blogs = () => {
+  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
+  const openModal = (blog) => {
+    setSelectedBlog(blog);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'auto';
   };
 
   return (
-    <section id="blogs">
-      <h2 className="text-center text-4xl font-bold text-white mt-9 mb-2 md:mb-12">
-        Blogs
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
-        />
+    <div className="container mx-auto px-4 py-20 mt-16">
+      <h1 className="text-3xl font-bold mb-8 text-center">Featured Blogs</h1>
+      
+      <div className="max-h-[70vh] overflow-y-auto pr-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
+          {blogs.map((blog) => (
+            <div 
+              key={blog.id} 
+              className="bg-black rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              onClick={() => openModal(blog)}
+            >
+              <div className="relative h-48 w-full">
+                <Image 
+                  src={blog.imageUrl} 
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {blog.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex} 
+                      className="px-2 py-1 bg-gray-100 text-gray-900 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
+                <p className="text-gray-200 line-clamp-2">{blog.description}</p>
+                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">
+                  Read More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
-    </section>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="relative h-64 w-full">
+              <Image 
+                src={selectedBlog.imageUrl} 
+                alt={selectedBlog.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex flex-wrap gap-2">
+                  {selectedBlog.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex} 
+                      className="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <button 
+                  onClick={closeModal}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <h2 className="text-2xl font-bold mb-4 text-gray-800">{selectedBlog.title}</h2>
+              <div className="prose max-w-none">
+                <p className="text-gray-600 mb-4">{selectedBlog.description}</p>
+                <p className="text-gray-800">{selectedBlog.content}</p>
+              </div>
+              <button 
+                onClick={closeModal}
+                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default ProjectsSection;
+export default Blogs;

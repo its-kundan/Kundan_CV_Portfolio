@@ -5,6 +5,7 @@ import ProjectsSection from "../components/ProjectsSection";
 import EmailSection from "../components/EmailSection";
 import Footer from "../components/Footer";
 import AchievementsSection from "../components/AchievementsSection";
+import Achievements from "@/components/Achievement";
 import Blogs from '../components/Blogs';
 import Profiles from '../components/Profiles';
 // import EducationTime from '../components/EducationTime';
@@ -22,12 +23,13 @@ export default function Home() {
       
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
-        <AchievementsSection />
         <AboutSection />
+        <AchievementsSection />
         {/* <Timeline2 /> */}
         <ProjectsSection />
         {/* <EducationTime /> */}
-        {/* <Blogs /> */}
+        {/* <Achievements /> */}
+        <Blogs />
         {/* <Profiles /> */}
         {/* <CodingSection /> */}
         <EducationTime />

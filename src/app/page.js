@@ -10,7 +10,7 @@ import Blogs from '../components/Blogs';
 import Profiles from '../components/Profiles';
 // import EducationTime from '../components/EducationTime';
 // import { VerticleTimeline } from "../components/VerticleTimeline";
-import Timeline2 from "../components/Timeline2";
+// import Timeline2 from "../components/Timeline2";
 import CodingSection from "../components/CodingSection"; //
 // import ExperienceSectionjsxjsx from "@/components/ExperienceSection";
 import Experience from "@/components/Experience";

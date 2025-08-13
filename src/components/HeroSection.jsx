@@ -98,8 +98,8 @@ const HeroSection = () => {
         <Image
           src="/images/hero-image.png"
           alt="hero image"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           className="rounded-full" // Ensuring the image is fully rounded
         />
       </div>

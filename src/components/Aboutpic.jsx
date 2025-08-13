@@ -22,7 +22,7 @@ function RotatingImage() {
         height={600}
         alt="DevCard"
         priority={true} // Optionally, mark the image as high priority if it's in the viewport initially
-        layout="responsive" // This makes the image scale nicely with the container
+        style={{ width: '100%', height: 'auto' }} // This makes the image scale nicely with the container
       />
     </div>
   );

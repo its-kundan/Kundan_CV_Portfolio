@@ -11,7 +11,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...colors, // Includes the default Tailwind colors
+        // Remove deprecated colors and use new ones
+        gray: colors.gray,
+        blue: colors.blue,
+        red: colors.red,
+        green: colors.green,
+        yellow: colors.yellow,
+        purple: colors.purple,
+        pink: colors.pink,
+        indigo: colors.indigo,
+        teal: colors.teal,
+        orange: colors.orange,
+        amber: colors.amber,
+        lime: colors.lime,
+        emerald: colors.emerald,
+        cyan: colors.cyan,
+        sky: colors.sky,
+        violet: colors.violet,
+        fuchsia: colors.fuchsia,
+        rose: colors.rose,
+        slate: colors.slate,
+        zinc: colors.zinc,
+        neutral: colors.neutral,
+        stone: colors.stone,
         neonPink: '#ff6ec7',
         neonGreen: '#39ff14',
         neonBlue: '#00c9ff',

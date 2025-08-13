@@ -103,7 +103,7 @@ const EmailSection = () => {
         {emailSubmitted ? (
           <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
             <p className="text-green-400 text-sm">
-              ✅ {useDigest ? 'Message stored for daily digest!' : 'Email sent successfully!'} I'll get back to you soon.
+              ✅ {useDigest ? 'Message stored for daily digest!' : 'Email sent successfully!'} I&apos;ll get back to you soon.
             </p>
             <button
               onClick={() => setEmailSubmitted(false)}

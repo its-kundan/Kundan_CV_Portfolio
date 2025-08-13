@@ -74,7 +74,51 @@ pnpm dev
 # or  
 bun dev  
 ```  
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.  
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+
+---
+
+## 🐳 Docker Support
+
+### Using Docker for Development
+To run the application in a Docker container with hot reloading:
+
+```bash
+# Build and run development container
+docker-compose -f docker-compose.dev.yml up --build
+
+# Or run in background
+docker-compose -f docker-compose.dev.yml up -d --build
+```
+
+### Using Docker for Production
+To build and run the production version:
+
+```bash
+# Build and run production container
+docker-compose up --build
+
+# Or run in background
+docker-compose up -d --build
+```
+
+### Manual Docker Commands
+```bash
+# Development
+docker build -f Dockerfile.dev -t portfolio-dev .
+docker run -p 3000:3000 -v $(pwd):/app portfolio-dev
+
+# Production
+docker build -t portfolio .
+docker run -p 3000:3000 portfolio
+```
+
+**Benefits of using Docker:**
+- ✅ Consistent development environment across different machines
+- ✅ No need to install Node.js or npm locally
+- ✅ Isolated dependencies prevent conflicts
+- ✅ Easy deployment to any Docker-compatible platform
+- ✅ Version control for the exact environment  
 
 Here’s the **updated folder structure** based on the image you provided:
 

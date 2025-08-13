@@ -23,14 +23,14 @@ const nextConfig = {
       }
     ],
   },
+  serverExternalPackages: ["@react-email/render", "resend"],
   experimental: {
-    serverComponentsExternalPackages: ["@react-email/render", "resend"],
     serverActions: true
   },
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      'react-dom/server': require.resolve('react-dom/server.browser')
+      'react-dom/server': 'react-dom/server.browser'
     }
     return config
   }

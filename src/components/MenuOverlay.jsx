@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import NavLink from "./NavLink";
 
-const MenuOverlay = ({ links }) => {
+const MenuOverlay = forwardRef(({ links }, ref) => {
   return (
-    <ul className="flex flex-col py-4 items-center">
+    <ul ref={ref} className="flex flex-col py-4 items-center">
       {links.map((link, index) => (
         <li key={index}>
           <NavLink href={link.path} title={link.title} />
@@ -11,6 +11,8 @@ const MenuOverlay = ({ links }) => {
       ))}
     </ul>
   );
-};
+});
+
+MenuOverlay.displayName = 'MenuOverlay';
 
 export default MenuOverlay;

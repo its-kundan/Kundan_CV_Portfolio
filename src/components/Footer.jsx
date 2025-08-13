@@ -82,7 +82,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white p-4 z-30 relative">
+    <footer className="bg-gray-900 text-white p-4 z-20 relative">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         {/* Navigation Links */}
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">

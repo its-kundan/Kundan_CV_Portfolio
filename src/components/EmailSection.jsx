@@ -6,16 +6,25 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaYoutube } from 'react-icons/fa';
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [useDigest, setUseDigest] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+    
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send";
+    const JSONdata = JSON.stringify({
+      ...data,
+      useDigest
+    });
+    const endpoint = "/api/messages";
 
     const options = {
       method: "POST",
@@ -25,12 +34,22 @@ const EmailSection = () => {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
+    try {
+      const response = await fetch(endpoint, options);
+      const resData = await response.json();
 
-    if (response.status === 200) {
-      console.log("Message sent.");
-      setEmailSubmitted(true);
+      if (response.status === 200) {
+        console.log("Message sent.");
+        setEmailSubmitted(true);
+        e.target.reset(); // Reset form
+      } else {
+        setError(resData.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -82,11 +101,31 @@ const EmailSection = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
-          </p>
+          <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+            <p className="text-green-400 text-sm">
+              ✅ {useDigest ? 'Message stored for daily digest!' : 'Email sent successfully!'} I'll get back to you soon.
+            </p>
+            <button
+              onClick={() => setEmailSubmitted(false)}
+              className="text-green-400 text-xs mt-2 hover:underline"
+            >
+              Send another message
+            </button>
+          </div>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <div>
+            <div className="mb-6 flex items-center gap-3">
+              <label className="flex items-center gap-2 text-white text-sm">
+                <input
+                  type="checkbox"
+                  checked={useDigest}
+                  onChange={(e) => setUseDigest(e.target.checked)}
+                  className="rounded border-gray-600 bg-[#18191E]"
+                />
+                <span>📬 Send as daily digest (reduces email clutter)</span>
+              </label>
+            </div>
+            <form className="flex flex-col" onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"
@@ -134,13 +173,22 @@ const EmailSection = () => {
                 placeholder="Let's talk about..."
               />
             </div>
+            {error && (
+              <div className="mb-4 bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+                <p className="text-red-400 text-sm">{error}</p>
+              </div>
+            )}
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              disabled={isSubmitting}
+              className={`bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full transition-colors ${
+                isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
-          </form>
+            </form>
+          </div>
         )}
       </div>
     </section>

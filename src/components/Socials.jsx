@@ -35,7 +35,7 @@ const socialData = [
 
 const SocialMediaIcons = () => {
   return (
-    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-4 p-2 z-51">
+    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 space-y-4 p-2 z-40">
       {socialData.map((social, index) => (
         <div key={index} className="relative group">
           <a

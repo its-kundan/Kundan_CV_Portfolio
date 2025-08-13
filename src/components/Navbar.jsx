@@ -46,7 +46,9 @@ const Navbar = () => {
       if (
         navbarRef.current && 
         !navbarRef.current.contains(event.target) &&
+        menuButtonRef.current &&
         !menuButtonRef.current.contains(event.target) &&
+        menuRef.current &&
         !menuRef.current.contains(event.target)
       ) {
         setNavbarOpen(false); // Close the navbar
@@ -98,7 +100,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay ref={menuRef} links={navLinks} /> : null}
     </nav>
   );
 };

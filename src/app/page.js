@@ -1,7 +1,9 @@
 import HeroSection from "../components/HeroSection";
-
 import AboutSection from "../components/AboutSection";
+import ServicesSection from "../components/ServicesSection";
+import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
+import CertificationsSection from "../components/CertificationsSection";
 import EmailSection from "../components/EmailSection";
 import Footer from "../components/Footer";
 import AchievementsSection from "../components/AchievementsSection";
@@ -24,9 +26,12 @@ export default function Home() {
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
+        <SkillsSection />
         <AchievementsSection />
         {/* <Timeline2 /> */}
         <ProjectsSection />
+        <CertificationsSection />
         {/* <EducationTime /> */}
         {/* <Achievements /> */}
         <Blogs />

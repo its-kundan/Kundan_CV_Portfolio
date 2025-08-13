@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Blog-specific utilities */
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Prose styles for blog content */
+@layer components {
+  .prose {
+    @apply text-gray-300;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply text-white font-semibold mb-4;
+  }
+  
+  .prose h1 {
+    @apply text-3xl;
+  }
+  
+  .prose h2 {
+    @apply text-2xl;
+  }
+  
+  .prose h3 {
+    @apply text-xl;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose ul,
+  .prose ol {
+    @apply mb-4 pl-6;
+  }
+  
+  .prose li {
+    @apply mb-2;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic my-4;
+  }
+  
+  .prose code {
+    @apply bg-gray-800 px-2 py-1 rounded text-sm;
+  }
+  
+  .prose pre {
+    @apply bg-gray-800 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  
+  .prose a {
+    @apply text-blue-400 hover:text-blue-300 underline;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

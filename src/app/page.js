@@ -26,8 +26,8 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <SkillsSection />
-        <AchievementsSection />
         <ProjectsSection />
+        <AchievementsSection />
         <CertificationsSection />
         <ContactSection />
       </div>

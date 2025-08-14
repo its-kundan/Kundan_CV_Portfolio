@@ -29,7 +29,7 @@ const ProjectsSection = () => {
 
   const displayedProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, isMobile ? 4 : 6);
+    : filteredProjects.slice(0, isMobile ? 4 : 8);
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -59,8 +59,8 @@ const ProjectsSection = () => {
       </div>
 
       {/* Filter Tags */}
-      <div className="text-white py-6 mx-auto w-full overflow-hidden mb-8">
-        <div className="grid grid-cols-4 sm:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-0.8 justify-center">
+      <div className="text-white py-6 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-5">
           <ProjectTag
             onClick={handleTagChange}
             name="All"
@@ -81,11 +81,26 @@ const ProjectsSection = () => {
             name="Robotics"
             isSelected={tag === "Robotics"}
           />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Chrome Extension"
+            isSelected={tag === "Chrome Extension"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="NPM Package"
+            isSelected={tag === "NPM Package"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Automation"
+            isSelected={tag === "Automation"}
+          />
         </div>
       </div>
 
       {/* Projects Grid */}
-      <ul ref={ref} className="grid md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-16 justify-items-center">
+      <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 justify-items-center">
         {displayedProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -108,7 +123,7 @@ const ProjectsSection = () => {
       </ul>
 
       {/* See More Button */}
-      {!showAll && filteredProjects.length > (isMobile ? 4 : 6) && (
+      {!showAll && filteredProjects.length > (isMobile ? 4 : 8) && (
         <div className="text-center mt-12">
           <button 
             onClick={handleSeeMore} 

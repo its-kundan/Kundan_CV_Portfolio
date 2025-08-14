@@ -163,7 +163,7 @@ const ContactSection = () => {
             </span>
           </h2>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-            Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life.
+            Ready to collaborate on your next project? Let&apos;s discuss how we can bring your ideas to life.
           </p>
         </motion.div>
 
@@ -178,11 +178,11 @@ const ContactSection = () => {
           >
             <div className="space-y-6">
               <h3 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm currently looking for new opportunities. Whether you have a question, 
-                want to collaborate, or just want to say hi, I'll try my best to get back to you!
+                I&apos;m currently looking for new opportunities. Whether you have a question, 
+                want to collaborate, or just want to say hi, I&apos;ll try my best to get back to you!
               </p>
             </div>
 
@@ -290,8 +290,8 @@ const ContactSection = () => {
                     </h4>
                     <p className="text-gray-300">
                       {useDigest 
-                        ? 'Your message has been stored for the daily digest. I\'ll get back to you soon!'
-                        : 'Thank you for reaching out! I\'ll get back to you as soon as possible.'
+                                        ? 'Your message has been stored for the daily digest. I&apos;ll get back to you soon!'
+                : 'Thank you for reaching out! I&apos;ll get back to you as soon as possible.'
                       }
                     </p>
                   </div>
@@ -306,7 +306,7 @@ const ContactSection = () => {
                 <div className="space-y-6">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-gray-200 mb-2">Send a Message</h3>
-                    <p className="text-gray-400">I'd love to hear from you!</p>
+                    <p className="text-gray-400">I&apos;d love to hear from you!</p>
                   </div>
 
                   <div className="flex items-center gap-3 mb-6">
@@ -346,7 +346,7 @@ const ContactSection = () => {
                         id="subject"
                         required
                         className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-xl text-gray-100 placeholder-gray-400 focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300"
-                        placeholder="What's this about?"
+                        placeholder="What&apos;s this about?"
                       />
                     </div>
 

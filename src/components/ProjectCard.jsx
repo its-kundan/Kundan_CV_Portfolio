@@ -58,7 +58,7 @@ const ProjectCard = ({
           </div>
 
           {/* Main Content Area */}
-          <div className="absolute top-20 left-0 right-0 bottom-0 bg-gray-50">
+          <div className="absolute top-20 left-0 right-0 bottom-0 bg-gray-900">
             {/* Project Image */}
             <div className="relative h-48 w-full overflow-hidden">
               <div
@@ -87,13 +87,13 @@ const ProjectCard = ({
             {/* Project Details */}
             <div className="p-4 space-y-4">
               {/* Description */}
-              <div className="bg-white rounded-xl p-3 shadow-sm">
-                <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
+              <div className="bg-gray-800 rounded-xl p-3 shadow-sm border border-gray-700">
+                <p className="text-gray-200 text-sm leading-relaxed">{description}</p>
               </div>
 
               {/* Tech Stack */}
-              <div className="bg-white rounded-xl p-3 shadow-sm">
-                <h4 className="text-gray-800 font-semibold text-sm mb-2 flex items-center">
+              <div className="bg-gray-800 rounded-xl p-3 shadow-sm border border-gray-700">
+                <h4 className="text-gray-100 font-semibold text-sm mb-2 flex items-center">
                   <span className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-2"></span>
                   Tech Stack
                 </h4>
@@ -101,7 +101,7 @@ const ProjectCard = ({
                   {tech.map((item, index) => (
                     <span
                       key={item}
-                      className={`text-xs px-2 py-1 rounded-full bg-gray-100 ${neonColors[index % neonColors.length]} font-medium`}
+                      className={`text-xs px-2 py-1 rounded-full bg-gray-700 border border-gray-600 ${neonColors[index % neonColors.length]} font-medium`}
                     >
                       {item}
                     </span>

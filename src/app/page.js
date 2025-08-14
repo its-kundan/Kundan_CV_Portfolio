@@ -5,7 +5,7 @@ import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
 import CertificationsSection from "../components/CertificationsSection";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
+
 import AchievementsSection from "../components/AchievementsSection";
 import Achievements from "@/components/Achievement";
 import Profiles from '../components/Profiles';
@@ -33,7 +33,6 @@ export default function Home() {
           <CertificationsSection />
           <ContactSection />
         </div>
-        <Footer />
       </div>
     </main>
   );

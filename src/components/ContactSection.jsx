@@ -257,14 +257,14 @@ const ContactSection = () => {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <h4 className="text-emerald-400 font-semibold text-lg mb-2">Download Resume</h4>
-                  <p className="text-gray-300 text-sm">Get my detailed resume in PDF format</p>
+                                     <h4 className="text-emerald-400 font-semibold text-lg mb-2">View Resume</h4>
+                   <p className="text-gray-300 text-sm">View my detailed resume on Google Drive</p>
                 </div>
-                <Link
-                  href="/resume.pdf"
-                  target="_blank"
-                  className="p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 hover:bg-emerald-500/30 transition-all duration-300"
-                >
+                                 <Link
+                   href="https://drive.google.com/file/d/12du4rhSkCaSU8L8Kb5QBF58iR6gIqSfb/view?usp=drive_link"
+                   target="_blank"
+                   className="p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 hover:bg-emerald-500/30 transition-all duration-300"
+                 >
                   <FaDownload className="text-emerald-400 text-xl" />
                 </Link>
               </div>

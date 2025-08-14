@@ -15,13 +15,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="col-span-7 text-center lg:text-left"
+            className="col-span-7 text-center lg:text-left w-full max-w-2xl lg:max-w-none"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -117,10 +117,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="col-span-5 flex justify-center"
+            className="col-span-5 flex flex-col items-center justify-center w-full"
           >
-            <div className="relative">
-              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full p-4 w-64 h-64 lg:w-80 lg:h-80 relative overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500">
+            <div className="relative flex flex-col items-center">
+              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full p-4 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 relative overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full" />
                 <Image
                   src="/images/hero-image.png"
@@ -130,6 +130,16 @@ const HeroSection = () => {
                   priority
                 />
               </div>
+              
+              {/* Name below the image */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold premium-text-gradient text-center"
+              >
+                Kundan Kumar
+              </motion.h2>
               
               {/* Floating elements */}
               <motion.div

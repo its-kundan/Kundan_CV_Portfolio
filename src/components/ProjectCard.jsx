@@ -50,8 +50,8 @@ const ProjectCard = ({
           <span className="text-black-300"> Tech Stack : </span>
           {tech.map((item, index) => (
             <span
-              key={index}
-              className={`text-lg ${neonColors[Math.floor(Math.random() * neonColors.length)]}`}
+              key={item}
+              className={`text-lg ${neonColors[index % neonColors.length]}`}
             >
               {item}
             </span>

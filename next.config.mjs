@@ -29,11 +29,18 @@ const nextConfig = {
       allowedOrigins: ['localhost:3000']
     }
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = config.externals || [];
+      config.externals.push('@react-email/render');
+    }
+    
+    // Handle react-dom/server import issue
     config.resolve.alias = {
       ...config.resolve.alias,
-      'react-dom/server': 'react-dom/server.browser'
+      'react-dom/server': isServer ? 'react-dom/server' : 'react-dom/server.browser'
     }
+    
     return config
   }
 };

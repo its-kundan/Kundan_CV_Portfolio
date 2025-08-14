@@ -40,7 +40,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="text-white">Hello, I'm </span>
+              <span className="text-white">Hello, I&apos;m </span>
               <br />
               <div className="h-20 md:h-24 lg:h-28 overflow-hidden">
                 <TypeAnimation

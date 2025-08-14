@@ -244,20 +244,20 @@ const AboutSection = () => {
           >
             <div className="space-y-8">
               <p className="text-gray-300 text-xl leading-relaxed">
-                Hi, I'm <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent font-semibold">Kundan Kumar</span>, a dedicated{" "}
+                Hi, I&apos;m <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent font-semibold">Kundan Kumar</span>, a dedicated{" "}
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent font-semibold">Full-Stack Developer</span> with
                 expertise in the <span className="text-blue-400 font-semibold">MERN stack, Next.js, Tailwind CSS, PostgreSQL, and AWS</span>.
               </p>
               
               <p className="text-gray-300 text-xl leading-relaxed">
-                I'm a <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent font-semibold">final-year student at NIT Agartala</span> with a passion for
+                I&apos;m a <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent font-semibold">final-year student at NIT Agartala</span> with a passion for
                 building scalable web applications and solving problems in{" "}
                 <span className="text-blue-400 font-semibold">web development, data structures, algorithms, and blockchain</span>.
               </p>
               
               <p className="text-gray-300 text-xl leading-relaxed">
                 I have hands-on experience with projects like{" "}
-                <span className="text-blue-400 font-semibold">Medical Management and Job Portal</span>, and I've solved over{" "}
+                <span className="text-blue-400 font-semibold">Medical Management and Job Portal</span>, and I&apos;ve solved over{" "}
                 <span className="text-blue-400 font-semibold">700 problems on LeetCode</span>, earning the title of{" "}
                 <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent font-semibold">LeetCode Knight</span>.
               </p>

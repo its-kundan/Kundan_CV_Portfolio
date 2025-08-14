@@ -29,7 +29,7 @@ const ProjectsSection = () => {
 
   const displayedProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, isMobile ? 4 : 8);
+    : filteredProjects.slice(0, 3);
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
       </div>
 
       {/* Projects Grid */}
-      <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 justify-items-center place-content-center">
+      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 xl:gap-20 justify-items-center place-content-center max-w-7xl mx-auto px-4">
         {displayedProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -123,7 +123,7 @@ const ProjectsSection = () => {
       </ul>
 
       {/* See More Button */}
-      {!showAll && filteredProjects.length > (isMobile ? 4 : 8) && (
+      {!showAll && filteredProjects.length > 3 && (
         <div className="text-center mt-12">
           <button 
             onClick={handleSeeMore} 

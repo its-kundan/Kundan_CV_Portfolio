@@ -28,10 +28,10 @@ const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
-  // Show 4 projects on mobile, 6 on larger screens, or all when "See More" is clicked
+  // Show 3 projects maximum, or all when "See More" is clicked
   const displayedProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, isMobile ? 4 : 6);
+    : filteredProjects.slice(0, 3);
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -68,7 +68,7 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 xl:gap-20 justify-items-center place-content-center max-w-7xl mx-auto px-4">
         {displayedProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
-      {!showAll && filteredProjects.length > (isMobile ? 4 : 6) && (
+      {!showAll && filteredProjects.length > 3 && (
         <div className="text-center mt-4">
           <button
             className="bg-blue-300 text-black px-4 py-2 rounded hover:bg-blue-500 transition duration-300"

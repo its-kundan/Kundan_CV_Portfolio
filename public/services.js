@@ -1,80 +1,145 @@
 export const servicesData = [
   {
     id: 1,
-    title: "Web Development",
-    description: "Full-stack web development using modern technologies like React, Next.js, Node.js, and MongoDB. Building responsive, scalable, and user-friendly web applications.",
+    title: "Full-Stack Web Development",
+    description: "End-to-end web application development using modern stacks like Next.js, React, Node.js, and PostgreSQL/MongoDB. Creating fast, scalable, and visually appealing applications.",
     icon: "🌐",
     features: [
-      "Frontend Development (React, Next.js)",
-      "Backend Development (Node.js, Express)",
-      "Database Design (MongoDB, PostgreSQL)",
-      "RESTful APIs & GraphQL",
-      "Responsive Design & UI/UX"
+      "Frontend Development (React.js, Next.js, Tailwind CSS, TypeScript)",
+      "Backend Development (Node.js, Express.js, Fastify, Django)",
+      "Database Design & Optimization (PostgreSQL, MongoDB, MySQL)",
+      "API Development (REST, GraphQL, WebSockets)",
+      "Responsive UI/UX & Accessibility"
     ]
   },
   {
     id: 2,
-    title: "Mobile Development",
-    description: "Cross-platform mobile application development using React Native and modern mobile development practices. Creating native-like experiences across iOS and Android.",
+    title: "Mobile App Development",
+    description: "Building high-performance, cross-platform mobile apps with native-like experiences using React Native and modern mobile frameworks.",
     icon: "📱",
     features: [
-      "React Native Development",
-      "Cross-platform Solutions",
-      "Mobile UI/UX Design",
-      "App Store Deployment",
-      "Performance Optimization"
+      "React Native & Expo Development",
+      "Cross-platform Solutions for iOS & Android",
+      "Mobile UI/UX Design with Tailwind Native",
+      "App Store & Play Store Deployment",
+      "Performance Tuning & Battery Optimization"
     ]
   },
   {
     id: 3,
-    title: "Cloud & DevOps",
-    description: "Cloud infrastructure setup, deployment automation, and DevOps practices using AWS, Docker, and CI/CD pipelines. Ensuring scalable and reliable deployments.",
+    title: "Cloud & DevOps Solutions",
+    description: "Cloud infrastructure setup, containerization, and automated deployments using AWS, GCP, Docker, Kubernetes, and CI/CD pipelines.",
     icon: "☁️",
     features: [
-      "AWS Cloud Services",
-      "Docker & Containerization",
-      "CI/CD Pipeline Setup",
-      "Server Management",
-      "Performance Monitoring"
+      "AWS & GCP Cloud Services",
+      "Docker & Kubernetes Orchestration",
+      "CI/CD Pipeline Setup (GitHub Actions, Jenkins, GitLab CI)",
+      "Serverless Functions & API Gateways",
+      "Monitoring & Logging (CloudWatch, Grafana)"
     ]
   },
   {
     id: 4,
-    title: "Blockchain Development",
-    description: "Web3 development including smart contracts, DApps, and blockchain integration. Building decentralized applications using Ethereum and other blockchain platforms.",
-    icon: "⛓️",
+    title: "Testing & Quality Assurance",
+    description: "Automated and manual testing to ensure bug-free, secure, and high-performing applications using Playwright, Appium, and other QA tools.",
+    icon: "🛡️",
     features: [
-      "Smart Contract Development",
-      "DApp Development",
-      "Web3 Integration",
-      "DeFi Applications",
-      "NFT Development"
+      "End-to-End Testing (Playwright, Cypress)",
+      "Mobile Testing with Appium",
+      "API Testing & Contract Validation",
+      "Security & Penetration Testing",
+      "Performance & Load Testing"
     ]
   },
   {
     id: 5,
-    title: "Data Structures & Algorithms",
-    description: "Problem-solving expertise with advanced data structures and algorithms. Experience with competitive programming and optimization techniques.",
-    icon: "🧮",
+    title: "Application Security & Ethical Hacking",
+    description: "Complete mobile and web application security testing with ethical hacking techniques to identify and fix vulnerabilities.",
+    icon: "🔒",
     features: [
-      "Algorithm Optimization",
-      "Data Structure Implementation",
-      "Competitive Programming",
-      "System Design",
-      "Performance Analysis"
+      "Root/Emulator Detection Testing & Bypass",
+      "SSL Pinning Bypass & Certificate Validation",
+      "App Tampering & Reverse Engineering Tests",
+      "OWASP Mobile & Web Security Compliance",
+      "Automated Security Reports & CI/CD Integration"
     ]
   },
   {
     id: 6,
-    title: "Technical Consulting",
-    description: "Technical consultation for startups and businesses, helping them choose the right technology stack and architecture for their projects.",
+    title: "Automation as a Service (AAAS)",
+    description: "Custom automation solutions for repetitive tasks, job applications, QA processes, and business workflows.",
+    icon: "⚙️",
+    features: [
+      "Web Automation (Playwright, Puppeteer, Selenium)",
+      "Mobile Automation (Appium)",
+      "Job Apply Bots & Social Media Automation",
+      "Data Scraping & Processing Pipelines",
+      "n8n Workflow Automation"
+    ]
+  },
+  {
+    id: 7,
+    title: "Financial & Banking Systems Development",
+    description: "Developing fintech applications with secure payments, UPI integration, investment tools, and data compliance.",
+    icon: "🏦",
+    features: [
+      "UPI/Payment Gateway Integration",
+      "Investment Portfolio Management Tools",
+      "Banking APIs & Secure Transactions",
+      "Data Privacy & Compliance (PCI-DSS, GDPR)",
+      "Financial Dashboards & Reporting"
+    ]
+  },
+  {
+    id: 8,
+    title: "AI & Productivity Tools",
+    description: "AI-powered solutions to boost productivity, automate workflows, and enhance decision-making.",
+    icon: "🤖",
+    features: [
+      "AI Chatbot Development (OpenAI, Gemini)",
+      "AI-powered Bug Reporting & QA Tools",
+      "Intelligent Form Fillers & Auto Apply Systems",
+      "Natural Language Processing (NLP) Integration",
+      "AI-based Data Analysis & Reporting"
+    ]
+  },
+  {
+    id: 9,
+    title: "Data Structures, Algorithms & System Design",
+    description: "Strong problem-solving skills with advanced DSA and scalable system architecture expertise, proven through competitive programming and real-world projects.",
+    icon: "🧮",
+    features: [
+      "Algorithm Optimization & Complexity Analysis",
+      "Custom Data Structure Implementation",
+      "Competitive Programming (LeetCode Knight Rank)",
+      "Low-Level & High-Level System Design",
+      "Code Profiling & Performance Analysis"
+    ]
+  },
+  {
+    id: 10,
+    title: "Startup & Technical Consulting",
+    description: "Helping startups and businesses with complete technical setup, architecture decisions, and scaling strategies from idea to production.",
     icon: "💡",
     features: [
-      "Technology Stack Selection",
-      "Architecture Design",
+      "Technology Stack Selection & MVP Planning",
+      "Architecture & Database Design",
       "Code Review & Optimization",
-      "Technical Documentation",
-      "Team Mentoring"
+      "Technical Documentation & Best Practices",
+      "Team Mentoring & Knowledge Sharing"
+    ]
+  },
+  {
+    id: 11,
+    title: "Monorepo & Scalable Project Architecture",
+    description: "Setting up monorepo architecture for multi-platform projects with shared codebases.",
+    icon: "📦",
+    features: [
+      "Turborepo & pnpm Workspace Setup",
+      "Cross-platform Code Sharing",
+      "Microservices & API Gateway Design",
+      "Shared UI Component Libraries",
+      "Optimized Build & Deployment Pipelines"
     ]
   }
 ];

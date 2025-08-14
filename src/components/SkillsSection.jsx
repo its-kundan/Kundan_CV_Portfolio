@@ -14,10 +14,13 @@ const SkillsSection = () => {
     { key: "frontend", name: "Frontend", icon: "🎨" },
     { key: "backend", name: "Backend", icon: "⚙️" },
     { key: "database", name: "Database", icon: "🗄️" },
-    { key: "cloud", name: "Cloud & DevOps", icon: "☁️" },
+    { key: "cloud_devops", name: "Cloud & DevOps", icon: "☁️" },
     { key: "tools", name: "Tools", icon: "🛠️" },
+    { key: "testing_security", name: "Testing & Security", icon: "🛡️" },
     { key: "blockchain", name: "Blockchain", icon: "⛓️" },
     { key: "mobile", name: "Mobile", icon: "📱" },
+    { key: "ai_ml", name: "AI & ML", icon: "🤖" },
+    { key: "architecture", name: "Architecture", icon: "🏗️" },
   ];
 
   const cardVariants = {
@@ -35,26 +38,27 @@ const SkillsSection = () => {
       </div>
 
       {/* Category Tabs */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 px-4">
         {categories.map((category) => (
           <button
             key={category.key}
             onClick={() => setActiveCategory(category.key)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 ${
+            className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 text-sm sm:text-base ${
               activeCategory === category.key
                 ? "bg-purple-600 text-white"
                 : "bg-gray-800 text-gray-300 hover:bg-gray-700"
             }`}
           >
-            <span className="text-lg">{category.icon}</span>
-            <span className="font-medium">{category.name}</span>
+            <span className="text-sm sm:text-lg">{category.icon}</span>
+            <span className="font-medium hidden sm:inline">{category.name}</span>
+            <span className="font-medium sm:hidden">{category.name.split(' ')[0]}</span>
           </button>
         ))}
       </div>
 
       {/* Skills Grid */}
       <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {skillsData[activeCategory].map((skill, index) => (
+        {(skillsData[activeCategory] || []).map((skill, index) => (
           <motion.div
             key={skill.name}
             variants={cardVariants}

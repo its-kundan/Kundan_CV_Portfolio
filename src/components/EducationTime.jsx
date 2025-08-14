@@ -35,9 +35,9 @@ const EducationData = [
         </ul>
         <div className="flex flex-wrap gap-2">
           {["PostgreSQL", "MongoDB", "Node.js", "AWS", "MERN Stack"].map(
-            (skill, index) => (
+            (skill) => (
               <span
-                key={index}
+                key={skill}
                 className="px-2 py-1 rounded-full bg-blue-500 text-white"
               >
                 {skill}
@@ -86,9 +86,9 @@ const EducationData = [
             "Socket.io",
             "AWS",
             "Job Portal",
-          ].map((skill, index) => (
+          ].map((skill) => (
             <span
-              key={index}
+              key={skill}
               className="px-2 py-1 rounded-full bg-blue-600 text-white"
             >
               {skill}
@@ -138,9 +138,9 @@ const EducationData = [
             "Python",
             "Landslide Detection",
             "Luminosity Drone",
-          ].map((skill, index) => (
+          ].map((skill) => (
             <span
-              key={index}
+              key={skill}
               className="px-2 py-1 rounded-full bg-orange-500 text-white"
             >
               {skill}
@@ -151,7 +151,7 @@ const EducationData = [
     ),
   },
   {
-    id: 3,
+    id: 4,
     title: "1st Year",
     period: "2021 - 2022",
     content: (
@@ -190,9 +190,9 @@ const EducationData = [
             "Python",
             "Landslide Detection",
             "Luminosity Drone",
-          ].map((skill, index) => (
+          ].map((skill) => (
             <span
-              key={index}
+              key={skill}
               className="px-2 py-1 rounded-full bg-orange-500 text-white"
             >
               {skill}
@@ -203,7 +203,7 @@ const EducationData = [
     ),
   },
   {
-    id: 4,
+    id: 5,
     title: "12th Class",
     period: "",
     content: (
@@ -219,9 +219,9 @@ const EducationData = [
           </li>
         </ul>
         <div className="flex flex-wrap gap-2">
-          {["Physics", "Chemistry", "Mathematics"].map((skill, index) => (
+          {["Physics", "Chemistry", "Mathematics"].map((skill) => (
             <span
-              key={index}
+              key={skill}
               className="px-2 py-1 rounded-full bg-green-500 text-white"
             >
               {skill}
@@ -232,7 +232,7 @@ const EducationData = [
     ),
   },
   {
-    id: 5,
+    id: 6,
     title: "11th Class",
     period: "",
     content: (
@@ -248,9 +248,9 @@ const EducationData = [
           </li>
         </ul>
         <div className="flex flex-wrap gap-2">
-          {["Advanced Mathematics", "C", "C++"].map((skill, index) => (
+          {["Advanced Mathematics", "C", "C++"].map((skill) => (
             <span
-              key={index}
+              key={skill}
               className="px-2 py-1 rounded-full bg-yellow-500 text-white"
             >
               {skill}
@@ -261,7 +261,7 @@ const EducationData = [
     ),
   },
   {
-    id: 6,
+    id: 7,
     title: "10th Class",
     period: "",
     content: (
@@ -278,10 +278,10 @@ const EducationData = [
         </ul>
         <div className="flex flex-wrap gap-2">
           {["Science", "Mathematics", "Quizzes", "Debates"].map(
-            (skill, index) => (
+            (skill) => (
               <button
                 className="px-8 py-2 rounded-full relative bg-slate-700 text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600"
-                key={index}
+                key={skill}
               >
                 <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
                 <span className="relative z-20">{skill}</span>

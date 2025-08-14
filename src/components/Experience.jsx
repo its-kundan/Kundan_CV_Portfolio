@@ -15,8 +15,8 @@ const experienceData = [
           <li>Collaborated with cross-functional teams for seamless project integration.</li>
         </ul>
         <div className="flex flex-wrap gap-2">
-          {["PostgreSQL", "MongoDB", "Node.js", "AWS"].map((skill, index) => (
-            <span key={index} className="px-2 py-1 rounded-full bg-blue-500 text-white">{skill}</span>
+          {["PostgreSQL", "MongoDB", "Node.js", "AWS"].map((skill) => (
+            <span key={skill} className="px-2 py-1 rounded-full bg-blue-500 text-white">{skill}</span>
           ))}
         </div>
       </div>
@@ -36,8 +36,8 @@ const experienceData = [
           <li>Explored and implemented Socket.io for real-time communication in chat applications.</li>
         </ul>
         <div className="flex flex-wrap gap-2">
-          {["React", "Node.js", "Express", "Socket.io", "AWS"].map((skill, index) => (
-            <span key={index} className="px-2 py-1 rounded-full bg-blue-600 text-white">{skill}</span>
+          {["React", "Node.js", "Express", "Socket.io", "AWS"].map((skill) => (
+            <span key={skill} className="px-2 py-1 rounded-full bg-blue-600 text-white">{skill}</span>
           ))}
         </div>
       </div>
@@ -57,8 +57,8 @@ const experienceData = [
           <li>Produced documentation detailing system design and testing methodologies.</li>
         </ul>
         <div className="flex flex-wrap gap-2">
-          {["Machine Learning", "Arduino", "OpenCV", "Python"].map((skill, index) => (
-            <span key={index} className="px-2 py-1 rounded-full bg-orange-500 text-white">{skill}</span>
+          {["Machine Learning", "Arduino", "OpenCV", "Python"].map((skill) => (
+            <span key={skill} className="px-2 py-1 rounded-full bg-orange-500 text-white">{skill}</span>
           ))}
         </div>
       </div>

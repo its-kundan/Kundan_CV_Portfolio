@@ -39,20 +39,25 @@ const SkillsSection = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-5 mb-12">
           {categories.map((category) => (
             <button
               key={category.key}
               onClick={() => setActiveCategory(category.key)}
-              className={`flex items-center gap-1 sm:gap-2 px-3 sm:px-4 lg:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 text-xs sm:text-sm lg:text-base ${
-                activeCategory === category.key
-                  ? "bg-purple-600 text-white"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              className={`relative inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 transition-all duration-300 hover:scale-105 ${
+                activeCategory === category.key ? 'ring-2 ring-purple-500 ring-offset-2 ring-offset-slate-950' : ''
               }`}
             >
-              <span className="text-sm sm:text-lg">{category.icon}</span>
-              <span className="font-medium hidden sm:inline">{category.name}</span>
-              <span className="font-medium sm:hidden">{category.name.split(' ')[0]}</span>
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium backdrop-blur-3xl transition-all duration-300 gap-1 sm:gap-2 ${
+                activeCategory === category.key 
+                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25' 
+                  : 'bg-slate-950 text-white hover:bg-slate-800'
+              }`}>
+                <span className="text-sm sm:text-lg">{category.icon}</span>
+                <span className="font-medium hidden sm:inline">{category.name}</span>
+                <span className="font-medium sm:hidden">{category.name.split(' ')[0]}</span>
+              </span>
             </button>
           ))}
         </div>

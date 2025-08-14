@@ -79,7 +79,7 @@ const ContactSection = () => {
     {
       icon: <MdLocationOn className="text-2xl" />,
       title: "Location",
-      value: "Hyderabad, Delhi, India",
+      value: "Hyderabad, India",
       link: "#",
       color: "purple",
       borderColor: "border-purple-500/20",

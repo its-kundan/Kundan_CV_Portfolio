@@ -120,40 +120,205 @@ const HeroSection = () => {
             className="col-span-5 flex flex-col items-center justify-center w-full"
           >
             <div className="relative flex flex-col items-center">
-              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full p-4 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 relative overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full" />
-                <Image
-                  src="/images/hero-image.png"
-                  alt="Kundan Kumar"
-                  fill
-                  className="rounded-full object-cover relative z-10"
-                  priority
-                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 320px"
-                  quality={90}
-                />
+              {/* Jarvis-style holographic rings */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px] rounded-full"
+              >
+                <div className="absolute inset-0 rounded-full border-2 border-blue-500/40 opacity-60" />
+                <div className="absolute inset-2 rounded-full border border-cyan-400/30 opacity-40" />
+                <div className="absolute inset-4 rounded-full border border-blue-300/20 opacity-30" />
+              </motion.div>
+              
+              {/* Scanning arc */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px]"
+              >
+                <div className="absolute inset-0 rounded-full border-t-2 border-r-2 border-blue-400 opacity-80" style={{ clipPath: 'polygon(50% 50%, 100% 0%, 100% 100%, 0% 100%, 0% 0%)' }} />
+              </motion.div>
+              
+              {/* Data stream lines */}
+              <div className="absolute w-80 h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[420px]">
+                {[...Array(12)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    animate={{ 
+                      rotate: 360,
+                      opacity: [0.3, 1, 0.3]
+                    }}
+                    transition={{ 
+                      rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                      opacity: { duration: 2, delay: i * 0.2, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="absolute w-full h-full"
+                    style={{
+                      transformOrigin: 'center',
+                      transform: `rotate(${i * 30}deg)`
+                    }}
+                  >
+                    <div className="absolute top-0 left-1/2 w-px h-8 bg-gradient-to-b from-blue-400 to-transparent" />
+                  </motion.div>
+                ))}
               </div>
               
-              {/* Name below the image */}
+              {/* Holographic grid */}
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  opacity: [0.4, 0.7, 0.4]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute w-72 h-72 md:w-88 md:h-88 lg:w-[380px] lg:h-[380px] rounded-full"
+              >
+                <div className="absolute inset-0 rounded-full border border-blue-300/20" />
+                <div className="absolute inset-4 rounded-full border border-cyan-400/15" />
+                <div className="absolute inset-8 rounded-full border border-blue-200/10" />
+              </motion.div>
+              
+              {/* Main image container with Jarvis-style border */}
+              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 z-10">
+                {/* Holographic border effect */}
+                <motion.div
+                  animate={{ 
+                    rotate: 360,
+                    scale: [1, 1.02, 1]
+                  }}
+                  transition={{ 
+                    rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  className="absolute inset-0 rounded-full p-1"
+                >
+                  <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 p-0.5">
+                    <div className="w-full h-full rounded-full bg-black" />
+                  </div>
+                </motion.div>
+                
+                {/* Inner glow */}
+                <motion.div
+                  animate={{ 
+                    opacity: [0.3, 0.6, 0.3],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-400/20 blur-sm"
+                />
+                
+                {/* Image */}
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <Image
+                    src="/images/hero-image.png"
+                    alt="Kundan Kumar"
+                    fill
+                    className="rounded-full object-cover"
+                    priority
+                    sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 320px"
+                    quality={90}
+                  />
+                  
+                  {/* Holographic overlay */}
+                  <motion.div
+                    animate={{ 
+                      opacity: [0, 0.1, 0],
+                      scale: [1, 1.02, 1]
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-cyan-300/5 to-blue-500/10 rounded-full"
+                  />
+                </div>
+              </div>
+              
+              {/* Jarvis-style data readouts */}
+              <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                <motion.div
+                  animate={{ opacity: [0.5, 1, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-xs text-blue-400 font-mono bg-black/50 px-2 py-1 rounded border border-blue-400/30"
+                >
+                  SCANNING...
+                </motion.div>
+              </div>
+              
+              <div className="absolute -bottom-20 left-1/2 transform -translate-x-1/2">
+                <motion.div
+                  animate={{ opacity: [0.7, 1, 0.7] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-xs text-cyan-400 font-mono bg-black/50 px-2 py-1 rounded border border-cyan-400/30"
+                >
+                  IDENTITY CONFIRMED
+                </motion.div>
+              </div>
+              
+              <div className="absolute top-1/2 -right-20 transform -translate-y-1/2">
+                <motion.div
+                  animate={{ opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-xs text-blue-300 font-mono bg-black/50 px-2 py-1 rounded border border-blue-300/30"
+                >
+                  STATUS: ONLINE
+                </motion.div>
+              </div>
+              
+              <div className="absolute top-1/2 -left-20 transform -translate-y-1/2">
+                <motion.div
+                  animate={{ opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="text-xs text-cyan-300 font-mono bg-black/50 px-2 py-1 rounded border border-cyan-300/30"
+                >
+                  ACCESS: GRANTED
+                </motion.div>
+              </div>
+              
+              {/* Floating holographic elements */}
+              <motion.div
+                animate={{ 
+                  y: [-5, 5, -5],
+                  rotate: [0, 360]
+                }}
+                transition={{ 
+                  y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                  rotate: { duration: 10, repeat: Infinity, ease: "linear" }
+                }}
+                className="absolute -top-8 -right-8 w-4 h-4 bg-blue-400 rounded-full opacity-60"
+              />
+              <motion.div
+                animate={{ 
+                  y: [5, -5, 5],
+                  rotate: [360, 0]
+                }}
+                transition={{ 
+                  y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                  rotate: { duration: 8, repeat: Infinity, ease: "linear" }
+                }}
+                className="absolute -bottom-8 -left-8 w-3 h-3 bg-cyan-400 rounded-full opacity-60"
+              />
+              
+              {/* Name with Jarvis-style glow */}
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold premium-text-gradient text-center"
+                className="mt-8 text-3xl md:text-4xl lg:text-5xl font-bold text-center relative z-10"
               >
-                Kundan Kumar
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-lg drop-shadow-blue-400/50">
+                  Kundan Kumar
+                </span>
               </motion.h2>
-              
-              {/* Floating elements */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-60"
-              />
-              <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full opacity-60"
-              />
             </div>
           </motion.div>
         </div>

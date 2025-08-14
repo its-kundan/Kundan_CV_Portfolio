@@ -8,7 +8,6 @@ import EmailSection from "../components/EmailSection";
 import Footer from "../components/Footer";
 import AchievementsSection from "../components/AchievementsSection";
 import Achievements from "@/components/Achievement";
-import Blogs from '../components/Blogs';
 import Profiles from '../components/Profiles';
 // import EducationTime from '../components/EducationTime';
 // import { VerticleTimeline } from "../components/VerticleTimeline";
@@ -34,7 +33,6 @@ export default function Home() {
         <CertificationsSection />
         {/* <EducationTime /> */}
         {/* <Achievements /> */}
-        <Blogs />
         {/* <Profiles /> */}
         {/* <CodingSection /> */}
         <EducationTime />

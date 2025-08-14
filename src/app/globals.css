@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -34,6 +30,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+  
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -66,42 +63,217 @@ body {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Premium Custom Classes */
+@layer components {
+  .premium-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .premium-card {
+    @apply bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl shadow-2xl;
+  }
+  
+  .premium-card-hover {
+    @apply hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500;
+  }
+  
+  .premium-text-gradient {
+    @apply bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+  
+  .premium-text-gradient-secondary {
+    @apply bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent;
+  }
+  
+  .premium-text-gradient-accent {
+    @apply bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .premium-border-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1px;
+  }
+  
+  .premium-glow {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  
+  .premium-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .premium-section {
+    @apply relative overflow-hidden py-20;
+  }
+  
+  .premium-section::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900;
+  }
+  
+  .premium-section::after {
+    content: '';
+    @apply absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)];
+  }
+  
+  .premium-container {
+    @apply max-w-7xl mx-auto px-4 relative z-10;
+  }
+  
+  .premium-button {
+    @apply px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 font-medium shadow-lg hover:shadow-xl;
+  }
+  
+  .premium-button-secondary {
+    @apply px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 font-medium shadow-lg hover:shadow-xl;
+  }
+  
+  .premium-input {
+    @apply bg-gray-800/50 border border-gray-700/50 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300;
+  }
+  
+  .premium-navbar {
+    @apply fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-700/50;
+  }
+  
+  .premium-navbar-link {
+    @apply text-gray-300 hover:text-white transition-colors duration-300 relative;
+  }
+  
+  .premium-navbar-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-300;
+  }
+  
+  .premium-navbar-link:hover::after {
+    @apply w-full;
+  }
+  
+  .premium-heading {
+    @apply text-5xl md:text-6xl font-bold mb-6;
+  }
+  
+  .premium-heading-primary {
+    @apply premium-heading premium-text-gradient;
+  }
+  
+  .premium-heading-secondary {
+    @apply premium-heading premium-text-gradient-secondary;
+  }
+  
+  .premium-subheading {
+    @apply text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed;
+  }
+  
+  .premium-card-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  .premium-animation-fade-in {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .premium-animation-scale {
+    animation: scaleIn 0.4s ease-out;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-/* Apply only when the height is greater than the width */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .premium-heading {
+    @apply text-4xl;
+  }
+  
+  .premium-card-grid {
+    @apply grid-cols-1 gap-6;
+  }
+}
+
 @media (orientation: portrait) {
   .min-vh-custom {
-    min-height: 70vh; /* Adjust this value as needed */
+    min-height: 70vh;
   }
 }
 
-/* Optional: Responsive adjustment for smaller screens in portrait mode */
 @media (orientation: portrait) and (max-height: 800px) {
   .min-vh-custom {
-    min-height: 50vh; /* Less space for very small devices */
+    min-height: 50vh;
   }
 }

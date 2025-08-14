@@ -9,36 +9,32 @@ import Footer from "../components/Footer";
 import AchievementsSection from "../components/AchievementsSection";
 import Achievements from "@/components/Achievement";
 import Profiles from '../components/Profiles';
-// import EducationTime from '../components/EducationTime';
-// import { VerticleTimeline } from "../components/VerticleTimeline";
-// import Timeline2 from "../components/Timeline2";
-import CodingSection from "../components/CodingSection"; //
-// import ExperienceSectionjsxjsx from "@/components/ExperienceSection";
+import CodingSection from "../components/CodingSection";
 import Experience from "@/components/Experience";
 import EducationTime from "@/components/EducationTime";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="relative min-h-screen">
+      {/* Background Effects */}
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
       
-      
-      <div className="container mt-24 mx-auto px-12 py-4">
+      {/* Content */}
+      <div className="relative z-10">
         <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <SkillsSection />
-        <AchievementsSection />
-        {/* <Timeline2 /> */}
-        <ProjectsSection />
-        <CertificationsSection />
-        {/* <EducationTime /> */}
-        {/* <Achievements /> */}
-        {/* <Profiles /> */}
-        {/* <CodingSection /> */}
-        <EducationTime />
-        <EmailSection />
+        
+        <div className="premium-container">
+          <AboutSection />
+          <ServicesSection />
+          <SkillsSection />
+          <AchievementsSection />
+          <ProjectsSection />
+          <CertificationsSection />
+          <EducationTime />
+          <EmailSection />
+        </div>
       </div>
-      {/* <Footer /> */}
     </main>
   );
 }

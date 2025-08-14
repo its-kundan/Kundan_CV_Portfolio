@@ -100,7 +100,7 @@ const ProjectsSection = () => {
       </div>
 
       {/* Projects Grid */}
-      <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 justify-items-center">
+      <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 justify-items-center place-content-center">
         {displayedProjects.map((project, index) => (
           <motion.li
             key={index}

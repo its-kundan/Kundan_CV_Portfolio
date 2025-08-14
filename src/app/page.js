@@ -24,14 +24,13 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
         
-        <div className="premium-container">
+        <div className="max-w-7xl mx-auto px-6">
           <AboutSection />
           <ServicesSection />
           <SkillsSection />
           <AchievementsSection />
           <ProjectsSection />
           <CertificationsSection />
-          <EducationTime />
           <EmailSection />
         </div>
       </div>

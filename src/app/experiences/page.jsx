@@ -1,12 +1,12 @@
 import Experience from '@/components/Experience'
 import React from 'react'
 
-const page = () => {
+const ExperiencesPage = () => {
   return (
-    <div>
+    <div className="pt-24">
       <Experience />
     </div>
   )
 }
 
-export default page
+export default ExperiencesPage

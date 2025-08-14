@@ -1,11 +1,12 @@
 import React from 'react'
 import EducationTime from "@/components/EducationTime";
-const page = () => {
+
+const EducationPage = () => {
   return (
-    <div>
+    <div className="pt-24">
       <EducationTime />
     </div>
   )
 }
 
-export default page
+export default EducationPage

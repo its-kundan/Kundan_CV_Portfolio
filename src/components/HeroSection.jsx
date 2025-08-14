@@ -117,7 +117,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="col-span-5 flex justify-center lg:justify-end"
+            className="col-span-5 flex justify-center"
           >
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-full p-4 w-64 h-64 lg:w-80 lg:h-80 relative overflow-hidden hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50 transition-all duration-500">

@@ -2,12 +2,12 @@
 import React from 'react'
 import AchievementsSection from '@/components/AchievementsSection'
 
-const page = () => {
+const AchievementsPage = () => {
   return (
-    <div>
+    <div className="pt-24">
       <AchievementsSection />
     </div>
   )
 }
 
-export default page
+export default AchievementsPage

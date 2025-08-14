@@ -1,104 +1,108 @@
-# Kundan's Portfolio Website  
-### Developer Portfolio Website, 
-A digital Resume to showcase my skills, experience, Educations, and Collaboration made easy.
-![Portfolio Preview](./public/images/projects/portfolio.png)  
+# Kundan Kumar - Full Stack Developer Portfolio 🚀
 
-Welcome to my **personal portfolio website**! This project is a modern, responsive, and interactive digital resume built using **Next.js**, **Tailwind CSS**, and **Framer Motion**. It showcases my skills, experience, education, and projects in a visually appealing and user-friendly way.  
+A modern, responsive, and interactive digital portfolio showcasing my skills, experience, education, and projects. Built with cutting-edge technologies for an exceptional user experience.
 
----
+![Portfolio Preview](./public/images/projects/portfolio.png)
 
-## 🚀 Features  
-- **Responsive Design**: Optimized for all devices, from desktops to mobile phones.  
-- **Advanced Animations**: Smooth animations using **Framer Motion**, including a typing effect in the hero section.  
-- **Dynamic Project Display**: Projects are displayed in a grid layout with filtering options based on tags.  
-- **Contact Form**: Integrated with **Nodemailer** to allow visitors to send emails directly from the website.  
-- **Dark Mode Support**: Built-in dark mode for better accessibility.  
-- **Modern UI**: Designed using **Tailwind CSS**, **Acernity UI**, and **shadcn/ui** for a clean and professional look.  
+## ✨ About Me
+
+I'm a **Full Stack Developer** currently pursuing **Computer Science & Engineering** at **National Institute of Technology, Agartala** (2021-2025). Passionate about creating innovative web applications and solving complex problems through technology.
 
 ---
 
-## 🛠️ Technologies Used  
-- **Frontend**:  
-  - Next.js (App Router)  
-  - Tailwind CSS  
-  - Framer Motion  
-  - Acernity UI  
-  - shadcn/ui  
-- **Backend**:  
-  - Next.js API Routes  
-  - Nodemailer (for email functionality)  
-- **Deployment**:  
-  - Vercel  
+## 🎯 Features
+
+- **🎨 Modern Design**: Clean, professional UI with smooth animations and transitions
+- **📱 Fully Responsive**: Optimized for all devices - desktop, tablet, and mobile
+- **⚡ Performance Optimized**: Fast loading times with Next.js and optimized assets
+- **🌙 Dark Mode**: Beautiful dark theme with smooth transitions
+- **📧 Contact Integration**: Working contact form with email functionality
+- **🎭 Advanced Animations**: Framer Motion powered animations throughout
+- **🔍 Project Filtering**: Dynamic project showcase with category filtering
+- **📊 Interactive Timeline**: Visual representation of education and experience
+- **🎯 SEO Optimized**: Built with best practices for search engine optimization
 
 ---
 
-## 🖥️ Live Demo  
-Check out the live version of the portfolio: **[Kundan's Portfolio](https://your-portfolio-link.com)**  
+## 🛠️ Tech Stack
+
+### **Frontend**
+- **Next.js 14** (App Router) - React framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **Aceternity UI** - Modern UI components
+- **shadcn/ui** - Re-usable components
+
+### **Backend & APIs**
+- **Next.js API Routes** - Server-side functionality
+- **Nodemailer** - Email integration
+- **MongoDB** - Database (for future features)
+
+### **Deployment & Tools**
+- **Vercel** - Hosting platform
+- **Docker** - Containerization
+- **Git** - Version control
 
 ---
 
-## 🛠️ Getting Started  
+## 🚀 Live Demo
 
-### Prerequisites  
-- Node.js (v18 or higher)  
-- npm/yarn/pnpm/bun  
+**[View Live Portfolio](https://kundan-cv-portfolio.vercel.app/)**
 
-### Installation  
-1. Clone the repository:  
-   ```bash  
-   git clone https://github.com/its-kundan/Kundan_CV_Portfolio.git  
-   ```  
-2. Navigate to the project directory:  
-   ```bash  
-   cd Kundan_CV_Portfolio  
-   ```  
-3. Install dependencies:  
-   ```bash  
-   npm install  
-   # or  
-   yarn install  
-   # or  
-   pnpm install  
-   # or  
-   bun install  
-   ```  
+---
 
-### Running the Development Server  
-Start the development server:  
-```bash  
-npm run dev  
-# or  
-yarn dev  
-# or  
-pnpm dev  
-# or  
-bun dev  
-```  
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+## 🏃‍♂️ Quick Start
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm/yarn/pnpm/bun
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/its-kundan/Kundan_CV_Portfolio.git
+   cd Kundan_CV_Portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🐳 Docker Support
 
-### Using Docker for Development
-To run the application in a Docker container with hot reloading:
-
+### Development with Docker
 ```bash
-# Build and run development container
+# Build and run with hot reload
 docker-compose -f docker-compose.dev.yml up --build
 
-# Or run in background
+# Run in background
 docker-compose -f docker-compose.dev.yml up -d --build
 ```
 
-### Using Docker for Production
-To build and run the production version:
-
+### Production with Docker
 ```bash
-# Build and run production container
+# Build and run production
 docker-compose up --build
 
-# Or run in background
+# Run in background
 docker-compose up -d --build
 ```
 
@@ -113,102 +117,149 @@ docker build -t portfolio .
 docker run -p 3000:3000 portfolio
 ```
 
-**Benefits of using Docker:**
-- ✅ Consistent development environment across different machines
-- ✅ No need to install Node.js or npm locally
-- ✅ Isolated dependencies prevent conflicts
-- ✅ Easy deployment to any Docker-compatible platform
-- ✅ Version control for the exact environment  
-
-Here’s the **updated folder structure** based on the image you provided:
+**Docker Benefits:**
+- ✅ Consistent development environment
+- ✅ No local Node.js installation required
+- ✅ Isolated dependencies
+- ✅ Easy deployment
+- ✅ Version-controlled environment
 
 ---
 
-## 📂 Project Structure  
-Here’s an overview of the project structure:  
-```  
-Kundan_CV_Portfolio/  
-├── node_modules/         # Installed dependencies  
-├── public/               # Static assets (images, fonts)  
-├── src/                  # Source code  
-│   ├── app/              # Next.js app router pages  
-│   │   ├── page.js       # Home page  
-│   │   └── api/          # API routes (e.g., contact form)  
-│   ├── components/       # Reusable components (e.g., Navbar, ProjectCard)  
-│   ├── lib/              # Utility functions and libraries  
-│   └── parts/            # Additional modular components or sections  
-├── .env.local            # Environment variables for local development  
-├── .eslintrc.json        # ESLint configuration  
-├── .gitignore            # Specifies files to ignore in Git  
-├── components.json       # Configuration for components (if applicable)  
-├── idea.md               # Project ideas or notes  
-├── jsconfig.json         # JavaScript configuration  
-├── new.cpp               # Additional C++ file (if applicable)  
-├── next.config.mjs       # Next.js configuration  
-├── package-lock.json     # Lockfile for dependencies  
-├── package.json          # Project dependencies and scripts  
-├── postcss.config.mjs    # PostCSS configuration  
-├── README.md             # Project documentation  
-└── tailwind.config.js    # Tailwind CSS configuration  
-```  
+## 📁 Project Structure
+
+```
+Kundan_CV_Portfolio/
+├── 📁 public/                 # Static assets
+│   ├── 📁 images/            # Images and media files
+│   ├── 📁 assets/            # Additional assets
+│   └── *.js                  # Data files
+├── 📁 src/
+│   ├── 📁 app/               # Next.js app router
+│   │   ├── 📁 api/           # API routes
+│   │   ├── 📁 components/    # Page components
+│   │   └── *.js              # Page files
+│   ├── 📁 components/        # Reusable components
+│   │   ├── 📁 ui/            # UI components
+│   │   └── *.jsx             # Component files
+│   └── 📁 lib/               # Utilities and helpers
+├── 📄 Dockerfile             # Production Docker config
+├── 📄 Dockerfile.dev         # Development Docker config
+├── 📄 docker-compose.yml     # Docker compose config
+└── 📄 package.json           # Dependencies and scripts
+```
 
 ---
 
-## 📝 Customization  
-- **Update Content**: Modify the content in `app/page.js` and other components to reflect your personal information.  
-- **Add Projects**: Update the `projects` data in the `Projects` component to showcase your work.  
-- **Change Theme**: Customize the color scheme in the `tailwind.config.js` file.  
+## 🎨 Customization Guide
+
+### **Personal Information**
+- Update content in `src/components/` files
+- Modify `public/*.js` data files for projects, skills, etc.
+- Edit `src/app/page.js` for main page content
+
+### **Styling**
+- Customize colors in `tailwind.config.js`
+- Modify global styles in `src/app/globals.css`
+- Update component-specific styles
+
+### **Adding Projects**
+- Edit `public/projects/data.js` or `public/projectdata.js`
+- Add project images to `public/images/projects/`
+- Update project categories and tags
 
 ---
 
-## 🚀 Deployment  
-The easiest way to deploy this project is using **Vercel**:  
-1. Push your code to a GitHub repository.  
-2. Go to [Vercel](https://vercel.com/new) and import your repository.  
-3. Follow the prompts to deploy your project.  
+## 🚀 Deployment
 
-For more details, check out the [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying).  
+### **Vercel (Recommended)**
+1. Push code to GitHub
+2. Connect repository to [Vercel](https://vercel.com)
+3. Deploy automatically
 
----
-
-## 📜 Initialize Git Repository  
-If you’re starting from scratch, initialize your Git repository and set up the remote:  
-```bash  
-git init  
-git remote add origin https://github.com/its-kundan/Kundan_CV_Portfolio.git  
-git branch -M main  
-git push -u origin main  
-```  
+### **Other Platforms**
+- **Netlify**: Connect GitHub repository
+- **Railway**: Deploy with Docker support
+- **AWS/GCP**: Use Docker containers
 
 ---
 
-## 📚 Learn More  
-To learn more about the technologies used in this project, check out the following resources:  
-- [Next.js Documentation](https://nextjs.org/docs)  
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)  
-- [Framer Motion Documentation](https://www.framer.com/motion/)  
-- [Acernity UI Documentation](https://ui.aceternity.com/)  
-- [shadcn/ui Documentation](https://ui.shadcn.com/)  
+## 📚 Education & Experience
+
+### **Education**
+- **Bachelor of Technology in Computer Science & Engineering**
+  - National Institute of Technology, Agartala
+  - **2021 - 2025** (Current)
+  - Focus: Full Stack Development, Machine Learning, IoT
+
+### **Experience**
+- **SDET Intern** at Stashfin (June 2025 - August 2025)
+- **Software Development Intern** at Onlinejaoo.com (Jan 2024 - Jun 2024)
+- **Full-Stack Developer** (Freelance, Jun 2022 - Present)
 
 ---
 
-## 🤝 Contributing  
-Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.  
+## 🛠️ Development
+
+### **Available Scripts**
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+```
+
+### **Environment Variables**
+Create `.env.local` for local development:
+```env
+# Email Configuration
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+```
 
 ---
 
-## 📄 License  
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+### **How to Contribute**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 🙏 Acknowledgments  
-- Special thanks to **Vercel** for providing an amazing platform to deploy Next.js apps.  
-- Inspired by modern portfolio designs and open-source projects.  
+## 📄 License
 
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-Enjoy exploring the code and building your own portfolio! If you have any questions, feel free to reach out.  
+---
 
---- 
+## 🙏 Acknowledgments
 
-This updated README provides a comprehensive overview of your project, making it easier for others to understand, use, and contribute to it. It also highlights your skills and the technologies you’ve used, which is great for showcasing your work to potential employers or collaborators. 🚀
+- **Vercel** for amazing hosting platform
+- **Next.js** team for the incredible framework
+- **Tailwind CSS** for the utility-first approach
+- **Framer Motion** for smooth animations
+- **Aceternity UI** for beautiful components
+- **shadcn/ui** for re-usable component library
+
+---
+
+## 📞 Contact
+
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
+- **GitHub**: [@its-kundan](https://github.com/its-kundan)
+- **Portfolio**: [Live Website](https://your-portfolio-link.com)
+
+---
+
+**⭐ Star this repository if you found it helpful!**
+
+---
+
+*Built with ❤️ by Kundan Kumar*

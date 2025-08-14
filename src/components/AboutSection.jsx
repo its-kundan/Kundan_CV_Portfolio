@@ -99,7 +99,7 @@ const TAB_DATA = [
             <div className="flex-1">
               <h4 className="text-emerald-400 font-bold text-2xl mb-3">National Institute of Technology, Agartala</h4>
               <p className="text-gray-300 text-lg mb-3">Bachelor of Technology in Computer Science & Engineering</p>
-              <p className="text-gray-400 text-base">2020 - 2024</p>
+              <p className="text-gray-400 text-base">2021 - 2025</p>
             </div>
             <div className="flex items-center">
               <span className="bg-emerald-500/20 text-emerald-400 text-sm font-medium px-4 py-2 rounded-full border border-emerald-500/30">

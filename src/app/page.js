@@ -16,23 +16,20 @@ import EducationTime from "@/components/EducationTime";
 export default function Home() {
   return (
     <main className="relative min-h-screen">
-      {/* Background Effects */}
+      {/* Global Background Effects */}
       <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
       
       {/* Content */}
       <div className="relative z-10">
         <HeroSection />
-        
-        <div className="max-w-7xl mx-auto px-6">
-          <AboutSection />
-          <ServicesSection />
-          <SkillsSection />
-          <AchievementsSection />
-          <ProjectsSection />
-          <CertificationsSection />
-          <ContactSection />
-        </div>
+        <AboutSection />
+        <ServicesSection />
+        <SkillsSection />
+        <AchievementsSection />
+        <ProjectsSection />
+        <CertificationsSection />
+        <ContactSection />
       </div>
     </main>
   );

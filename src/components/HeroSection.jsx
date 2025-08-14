@@ -128,6 +128,8 @@ const HeroSection = () => {
                   fill
                   className="rounded-full object-cover relative z-10"
                   priority
+                  sizes="(max-width: 768px) 256px, (max-width: 1024px) 288px, 320px"
+                  quality={90}
                 />
               </div>
               

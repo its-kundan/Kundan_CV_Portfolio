@@ -151,10 +151,6 @@ const Achievements = ({ achievements = [] }) => {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-      
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         {/* Header */}
         <motion.div
@@ -163,11 +159,11 @@ const Achievements = ({ achievements = [] }) => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-6xl md:text-7xl font-bold mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
             <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               My
             </span>
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent ml-6">
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent ml-2 sm:ml-4 md:ml-6">
               Achievements
             </span>
           </h2>

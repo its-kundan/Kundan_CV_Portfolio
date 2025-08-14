@@ -75,6 +75,17 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Performance optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Reduce layout shift */
+  .image-container {
+    aspect-ratio: 1;
+  }
 }
 
 /* Premium Custom Classes */

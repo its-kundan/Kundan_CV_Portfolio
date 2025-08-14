@@ -63,11 +63,20 @@ const Navbar = () => {
       }
     };
 
+    const handleScroll = () => {
+      if (navbarOpen) {
+        setNavbarOpen(false);
+      }
+    };
+
     document.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+    
     return () => {
       document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [navbarOpen]);
 
   return (
     <nav
@@ -118,7 +127,7 @@ const Navbar = () => {
       
       {navbarOpen ? (
         <div className="md:hidden">
-          <MenuOverlay ref={menuRef} links={navLinks} />
+          <MenuOverlay ref={menuRef} links={navLinks} onClose={() => setNavbarOpen(false)} />
         </div>
       ) : null}
     </nav>

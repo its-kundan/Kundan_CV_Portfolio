@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image';
-import blogs from '../../data/blogs.js';
+import blogs from '../../public/blogs.js';
 
 const Blogs = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);

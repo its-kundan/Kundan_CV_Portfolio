@@ -109,7 +109,40 @@ export const projectsData = [
       "gitUrl": "https://github.com/its-kundan/dWallet2",
       "previewUrl": "https://d-wallet2.vercel.app/",
       "tech": ["#web3", "#blockchain", "#react.js", "#next.js", "#tailwindcss"]
+    },
+    {
+  "id": 14,
+  "title": "Meme Generator",
+  "description": "A fun web application that allows users to generate and customize memes instantly with ease.",
+  "image": "/images/projects/meme-generator.png",
+  "tag": ["All", "Fun", "Web"],
+  "gitUrl": "https://github.com/its-kundan/memes-generator",
+  "previewUrl": "https://memes-generator-orcin.vercel.app/",
+  "tech": ["#react.js", "#next.js", "#tailwindcss", "#javascript"]
+},
+
+    {
+      "id": 15,
+      "title": "Quick Help (Chrome Extension)",
+      "description": "A Chrome extension to save and access quick links and prompts directly in the browser, helping users stay productive without switching tabs.",
+      "image": "/images/projects/quick-help.png",
+      "tag": ["All", "Extension", "Web"],
+      "gitUrl": "https://github.com/its-kundan/quick-help",
+      "previewUrl": "https://chromewebstore.google.com/detail/quick-links-prompts/lhhhmnihlakcdgogjknodekakgdbdphe?authuser=0&hl=en-GB",
+      "tech": ["#javascript", "#chrome-extension", "#html", "#css"]
+    },
+    {
+      "id": 16,
+      "title": "TIS (Tracking Information System)",
+      "description": "A web application designed to manage and track information efficiently with a clean UI and modern stack.",
+      "image": "/images/projects/tis.png",
+      "tag": ["All", "Web"],
+      "gitUrl": "https://github.com/its-kundan/tis",
+      "previewUrl": "https://tis-alpha.vercel.app/",
+      "tech": ["#next.js", "#tailwindcss", "#node.js", "#express.js"]
     }
+    
+    
     
     
     

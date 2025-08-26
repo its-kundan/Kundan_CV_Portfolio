@@ -251,10 +251,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Contact
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)
+- **Email**: [kundan51kk@gmail.com](mailto:kundan51kk@gmail.com) , [developer.it.kundan@gmail.com](mailto:developer.it.kundan@gmail.com)
+- **LinkedIn**: [Kundan Kumar](https://linkedin.com/in/its-kundan)
 - **GitHub**: [@its-kundan](https://github.com/its-kundan)
-- **Portfolio**: [Live Website](https://your-portfolio-link.com)
+- **Portfolio**: [Live Website](https://kundan-cv-portfolio.vercel.app/)
 
 ---
 

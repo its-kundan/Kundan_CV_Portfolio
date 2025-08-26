@@ -90,16 +90,7 @@ export const projectsData = [
       "previewUrl": "https://www.npmjs.com/package/social-floating-icons",
       "tech": ["#react.js", "#next.js", "#npm", "#javascript"]
     },
-    {
-      "id": 12,
-      "title": "Quick Help (Chrome Extension)",
-      "description": "A Chrome extension to save and access quick links and prompts directly from the browser, reducing the need to switch between tabs or apps.",
-      "image": "/images/projects/quick-help.png",
-      "tag": ["All", "Web", "Extension"],
-      "gitUrl": "https://github.com/its-kundan/quick-help",
-      "previewUrl": "https://chromewebstore.google.com/detail/quick-links-prompts/lhhhmnihlakcdgogjknodekakgdbdphe",
-      "tech": ["#javascript", "#chrome-extension", "#html", "#css"]
-    },
+    
     {
       "id": 13,
       "title": "dWallet (Web3 dApp)",

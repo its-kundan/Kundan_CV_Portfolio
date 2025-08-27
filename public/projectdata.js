@@ -124,8 +124,8 @@ export const projectsData = [
     },
     {
       "id": 16,
-      "title": "TIS (Tracking Information System)",
-      "description": "A web application designed to manage and track information efficiently with a clean UI and modern stack.",
+      "title": "TIS (The Indian Speaker)",
+      "description": "English Speaking Trainer Website",
       "image": "/images/projects/tis.png",
       "tag": ["All", "Web"],
       "gitUrl": "https://github.com/its-kundan/tis",
